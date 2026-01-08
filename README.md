@@ -6,16 +6,15 @@ The main focus of the page is to present my CG Production Data Assistant.
 
 ## Features
 
-- **Modern, Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Project Showcase**: Embedded Hugging Face Space for interactive project demonstration
-- **Smooth Navigation**: Fixed navbar with smooth scrolling between sections
+- **Modern Design**: Works across desktop, tablet, and mobile devices
+- **Project Showcase**: Embedded Hugging Face Space for an interactive project demonstration
 - **Professional Sections**: 
-  - About Me
   - Featured Project with development process
-  - Experience
+  - About Me
   - Education
+  - Experience
   - Skills
-  - Contact Information
+  - Contact 
 
 
 Cursor was used to help build the structure of the website.
