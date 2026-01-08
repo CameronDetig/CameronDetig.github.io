@@ -1,6 +1,6 @@
-# Portfolio Site for Pixar Storage Analytics Intern Application
+# Portfolio Site for my application to Pixar's Storage Analytics Internship 2026.
 
-A modern, responsive portfolio website built for applying to Pixar's Storage Analytics Intern position (Summer 2026). This site showcases projects, experience, education, and skills with a focus on AI/ML technologies and data analytics.
+This site showcases projects, experience, education, and skills with a focus on AI/ML technologies and data analytics.
 
 ## Features
 
