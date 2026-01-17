@@ -20,3 +20,9 @@ The main focus of the page is to present my CG Production Data Assistant.
 
 
 Cursor was used to help build the structure of the website.
+
+### For local testing, run:
+
+```python3 -m http.server 3000```
+
+Then go to http://localhost:3000/ to preview the site.
