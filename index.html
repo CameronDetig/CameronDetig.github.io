@@ -14,9 +14,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio site showcasing projects and experience for Pixar Storage Analytics Intern application">
-    <title>Cameron's Portfolio | Pixar Intern Application</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Portfolio showcasing AI and machine learning projects by Cameron Detig, MS Computer Science student specializing in LLMs and data systems.">
+    <title>Cameron Detig - AI & Software Development Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,14 +26,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">Cameron Detig Portfolio</div>
+            <a href="index.html" class="nav-logo">Cameron Detig</a>
             <ul class="nav-menu">
-                <li><a href="#project" class="nav-link">Project</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -52,268 +48,109 @@
         </div>
     </section>
 
-    <!-- Project Section -->
-    <section id="project" class="section project-section">
+    <!-- Introduction Section -->
+    <section class="section intro-section">
         <div class="container">
-            <h2 class="section-title">CG Production Data Assistant</h2>
-
-            <p>When I saw Pixar’s posting for the Storage Analytics Internship, it looked like a perfect opportunity to apply the skills I have learned during my MS program!
-                I began planning out a small version of the data assistant system described in the job posting. The concept was quite similar to a project I have worked on for Honeywell so I already had a good idea of how it should work.
-                My plan was to create a portfolio piece for my application, and to also use it as an opportunity to learn more about AWS and containerization.</p>
-
-            <div class="project-embed">
-                <div class="demo-links">
-                    <p class="demo-description">
-                        Try out the Assistant below, or 
-                        <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank" rel="noopener noreferrer" class="direct-link">
-                            open it directly on Hugging Face <span class="link-arrow">→</span>
-                        </a>
-                    </p>
-                </div>
-                <div class="huggingface-embed">
-                    <div id="hf-loading" style="text-align: center; padding: 2rem; color: var(--text-light);">
-                        <div class="loading-spinner"></div>
-                        <p style="margin-top: 1rem;">Loading interactive demo... This may take a moment if the Space is starting up.</p>
-                    </div>
-                    <iframe 
-                        src="https://cameron-d-cg-production-assistant.hf.space"
-                        frameborder="0"
-                        width="100%"
-                        height="800"
-                        title="CG Production Assistant - Hugging Face Space"
-                        class="hf-iframe"
-                        style="display: none;"
-                        allow="accelerometer; autoplay; camera; encrypted-media; fullscreen; geolocation; gyroscope; microphone; midi; payment; picture-in-picture"
-                        loading="eager">
-                    </iframe>
-                    <div id="hf-error" style="display: none; text-align: center; padding: 2rem; background-color: #fff3cd; border-radius: 8px; margin-top: 1rem;">
-                        <p style="color: #856404; margin-bottom: 1rem;">⚠️ Unable to load the embedded Space. The Space may be sleeping or embedding may be disabled.</p>
-                        <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank" rel="noopener noreferrer" class="error-link">Open Space in New Tab →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-container">
-                <div class="project-info">
-                    <p class="project-description">
-                        From working at The Third Floor, I was familiar with the importance of being able to quickly get information on a show or track down a specific file you're looking for.
-                        This project seemed like something that would be of real value and be a good application of the LLM / RAG techniques.<br><br>
-
-                        The first problem to sort out was what data source I would use for the project. Luckily, Blender Studio offers open source assets from all of their <a href="https://studio.blender.org/films/">short films</a> going back to 2006.
-                        This provided a perfect database that could simulate the sort of production environment that a studio like Pixar would have. 
-                        Also, using Blender meant it would be easy to install and use in the data processing container, as opposed to a DCC like Maya that would require a license. 
-                    </p>
-                    <h4 class="project-subtitle">Development Process</h4>
-                    
-                    <p class="project-description">
-                        Below is a diagram of the system.
-                    </p>
-
-                    <img src="images/CG_Production_Data_Assistant_Diagram.png" alt="System Diagram" class="diagram-image">
-
-                    <p class="project-description">
-                        Antigravity with Claude Sonnet 4.5 was utilized in the development of this project, and was a great help in coding a system this large in the time frame that I had. 
-                        It still required a large amount of effort and learning on my part, but allowed me to think bigger picture about the architecture of the system instead of being in the weeds of debugging.
-                        <br><br>
-
-                        In my machine learning class last semester, I learned about OpenAI’s CLIP model that is able to create embeddings for both text and images. 
-                        This was in the context of using CLIP for text2image diffusion models, but it seemed like a great way to allow users to both enter text descriptions of the file they are looking for, and have the system compare it against thumbnail image embeddings to find similar files. 
-                        This would also allow the user to upload an image to the assistant to search for similar thumbnail images.
-                    </p>
-
-                    <p class="project-description">
-                        <strong>Problem Statement:</strong> [Describe the problem you were solving]
-                    </p>
-
-                    <p class="project-description">                    
-                        <strong>Approach:</strong> [Describe your technical approach, frameworks used (LangChain, 
-                        OpenAI API, Hugging Face), and architecture decisions]
-                    </p>
-
-                    <p class="project-description">
-                        <strong>Implementation:</strong> [Detail the implementation process, challenges faced, 
-                        and how you overcame them]
-                    </p>
-
-                    <p class="project-description">
-                        <strong>Results & Learnings:</strong> [Share outcomes, metrics, and key takeaways]
-                    </p>
-
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">Hugging Face</span>
-                        <span class="tech-tag">Data Analytics</span>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p class="about-text">
-                    I am a current Computer Science Master’s student with a unique mix of experience in artificial intelligence and VFX / Animation. 
-                    I have focused my studies on AI and Machine Learning, particularly in the use of LLMs for gaining insights to large datasets using Retrieval Augmented Generation.
-                </p>
-                <p class="about-text">
-                    My journey began as a previs artist at The Third Floor where I gained experience working on the art side. Using animation and cinematography to visualize scenes for shows such as Ahsoka and Predator: Killer of Killers. 
-                    This was an amazing experience and gave me insight to how a professional pipeline runs and the level of data management that is required, using tools like ShotGrid and Perforce to keep everything organized. 
-                </p>
-                <p class="about-text">
-                    This background was a great help in designing the CG Production Assistant and I feel would similarly contribute to the Storage and Backup team at Pixar.
+            <div class="intro-content">
+                <p class="intro-text">
+                    I'm a Computer Science Master's student with a unique blend of experience in artificial intelligence and production pipelines. 
+                    My work focuses on applying LLMs and machine learning to solve real-world data challenges, with hands-on experience from both 
+                    academic research and professional VFX production environments.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section education-section">
+    <!-- Projects Gallery Section -->
+    <section id="projects" class="section projects-section">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-list">
-
-                <div class="education-item">
-                    <span class="education-school">University of North Carolina at Charlotte</span>
-                    <h3 class="education-degree">MS in Computer Science</h3>
-                    <span class="education-date">January 2025 - May 2026 (Expected)</span>
-                </div>
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
                 
-                <div class="education-item">
-                    <span class="education-school">University of North Carolina at Wilmington</span>
-                    <h3 class="education-degree">BS in Computer Science - Concentration in Digital Arts</h3>
-                    <h3 class="education-degree">BA in Film Studies</h3>
-                    <span class="education-date">August 2017 - May 2021</span>
+                <!-- Project 1: CG Production Data Assistant -->
+                <a href="projects/cg-production-assistant.html" class="project-card">
+                    <div class="project-card-image">
+                        <img src="images/projects/cg-assistant/thumbnail.png" alt="CG Production Data Assistant">
+                        <div class="project-card-overlay">
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">CG Production Data Assistant</h3>
+                        <p class="project-card-description">
+                            AI-powered assistant for querying CG production data using LLMs, RAG, and vector databases. 
+                            Built with AWS, LangChain, and deployed on Hugging Face.
+                        </p>
+                        <div class="project-card-tech">
+                            <span class="tech-tag-small">Python</span>
+                            <span class="tech-tag-small">LLMs</span>
+                            <span class="tech-tag-small">AWS</span>
+                            <span class="tech-tag-small">LangChain</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2: Coming Soon -->
+                <div class="project-card project-card-placeholder">
+                    <div class="project-card-image">
+                        <img src="images/placeholders/project-2.png" alt="Project Coming Soon">
+                        <div class="project-card-overlay coming-soon-overlay">
+                            <span class="coming-soon-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Project 2</h3>
+                        <p class="project-card-description">
+                            New project in development. Check back soon for updates!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 3: Coming Soon -->
+                <div class="project-card project-card-placeholder">
+                    <div class="project-card-image">
+                        <img src="images/placeholders/project-3.png" alt="Project Coming Soon">
+                        <div class="project-card-overlay coming-soon-overlay">
+                            <span class="coming-soon-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Project 3</h3>
+                        <p class="project-card-description">
+                            New project in development. Check back soon for updates!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 4: Coming Soon -->
+                <div class="project-card project-card-placeholder">
+                    <div class="project-card-image">
+                        <img src="images/placeholders/project-4.png" alt="Project Coming Soon">
+                        <div class="project-card-overlay coming-soon-overlay">
+                            <span class="coming-soon-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Project 4</h3>
+                        <p class="project-card-description">
+                            New project in development. Check back soon for updates!
+                        </p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section experience-section">
+    <!-- Call to Action Section -->
+    <section class="section cta-section">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Generative AI Graduate Research Assistant</h3>
-                        <span class="experience-company">UNC Charlotte - Computer Science Dept.</span>
-                        <span class="experience-date">June 2025 - Present</span>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Generative AI Teaching Assistant</h3>
-                        <span class="experience-company">UNC Charlotte - Computer Science Dept.</span>
-                        <span class="experience-date">August 2025 - Present</span>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Previsualization Artist</h3>
-                        <span class="experience-company">The Third Floor Inc.</span>
-                        <span class="experience-date">Contract: Sept 2021 - Feb 2024, July 2024 - Nov 2024</span>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Immersive Media Computing REU Student Researcher</h3>
-                        <span class="experience-company">Georgia State University - REU Summer Program</span>
-                        <span class="experience-date">June 2021 - July 2021</span>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Undergraduate Research Assistant</h3>
-                        <span class="experience-company">UNC Wilmington - Computer Science Dept.</span>
-                        <span class="experience-date">May 2019 - Nov 2020</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Programming</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">C++</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">AI & Machine Learning</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Large Language Models</span>
-                        <span class="skill-tag">LangChain</span>
-                        <span class="skill-tag">OpenAI API</span>
-                        <span class="skill-tag">Hugging Face</span>
-                        <span class="skill-tag">RAG (Retrieval-Augmented Generation)</span>
-                        <span class="skill-tag">Vector Databases</span>
-                        <span class="skill-tag">PyTorch</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Cloud & Data</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Snowflake</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Systems & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">CUDA</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Creative & Production Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Maya</span>
-                        <span class="skill-tag">Unreal Engine</span>
-                        <span class="skill-tag">ShotGrid</span>
-                        <span class="skill-tag">Perforce</span>
-                        <span class="skill-tag">OpenGL</span>
-                        <span class="skill-tag">Blender</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p class="contact-text">
-                    I'd love to learn more about the position and discuss how my experience in AI application development could contribute to the amazing work being done at Pixar!
-                    Feel free to reach out!
+            <div class="cta-content">
+                <h2 class="cta-title">Want to learn more?</h2>
+                <p class="cta-text">
+                    Explore my background, experience, and skills in AI, machine learning, and production systems.
                 </p>
-                <div class="contact-links">
-                    <a href="mailto:camerondetig@gmail.com" class="contact-link">Email</a>
-                    <a href="https://github.com/CameronDetig" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
-                    <a href="https://www.linkedin.com/in/cameron-detig/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
-                </div>
+                <a href="about.html" class="cta-button">Learn More About Me</a>
             </div>
         </div>
     </section>
@@ -322,10 +159,13 @@
     <footer class="footer">
         <div class="container">
             <p>Cameron Detig - camerondetig@gmail.com</p>
+            <div class="footer-links">
+                <a href="https://github.com/CameronDetig" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/cameron-detig/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HVH1X106DQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HVH1X106DQ');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AI-powered assistant for querying CG production data using LLMs, RAG, and vector databases. Built with AWS, LangChain, and deployed on Hugging Face.">
+    <title>CG Production Data Assistant - Cameron Detig</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Cameron Detig</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-hero-title">CG Production Data Assistant</h1>
+            <p class="page-hero-subtitle">AI-Powered Production Data Query System</p>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section project-detail-section">
+        <div class="container">
+
+            <!-- Project Overview -->
+            <div class="project-detail-content">
+                <h2 class="project-detail-heading">Project Overview</h2>
+                <p class="project-detail-text">
+                    Drawing on my background in VFX / Animation, I set out on making an LLM powered assistant that would
+                    be useful to that industry.
+                </p>
+            </div>
+
+            <!-- Interactive Demo -->
+            <div class="project-embed">
+                <div class="demo-links">
+                    <p class="demo-description">
+                        Try out the Assistant below, or
+                        <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank"
+                            rel="noopener noreferrer" class="direct-link">
+                            open it directly on Hugging Face <span class="link-arrow">→</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="huggingface-embed">
+                    <div id="hf-loading" style="text-align: center; padding: 2rem; color: var(--text-light);">
+                        <div class="loading-spinner"></div>
+                        <p style="margin-top: 1rem;">Loading interactive demo... This may take a moment if the Space is
+                            starting up.</p>
+                    </div>
+                    <iframe src="https://cameron-d-cg-production-assistant.hf.space" frameborder="0" width="100%"
+                        height="800" title="CG Production Assistant - Hugging Face Space" class="hf-iframe"
+                        style="display: none;"
+                        allow="accelerometer; autoplay; camera; encrypted-media; fullscreen; geolocation; gyroscope; microphone; midi; payment; picture-in-picture"
+                        loading="eager">
+                    </iframe>
+                    <div id="hf-error"
+                        style="display: none; text-align: center; padding: 2rem; background-color: #fff3cd; border-radius: 8px; margin-top: 1rem;">
+                        <p style="color: #856404; margin-bottom: 1rem;">⚠️ Unable to load the embedded Space. The Space
+                            may be sleeping or embedding may be disabled.</p>
+                        <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank"
+                            rel="noopener noreferrer" class="error-link">Open Space in New Tab →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development Process -->
+            <div class="project-detail-content">
+                <h2 class="project-detail-heading">Development Process</h2>
+                <p class="project-detail-text">
+                    From working at The Third Floor, I was familiar with the importance of being able to quickly get
+                    information on a show or track down a specific file you're looking for.
+                    This project seemed like something that would be of real value and be a good application of the LLM
+                    / RAG techniques.
+                </p>
+                <p class="project-detail-text">
+                    The first problem to sort out was what data source I would use for the project. Luckily, Blender
+                    Studio offers open source assets from all of their <a href="https://studio.blender.org/films/"
+                        target="_blank" rel="noopener noreferrer">short films</a> going back to 2006.
+                    This provided a perfect database that could simulate the sort of production environment that a
+                    studio like Pixar would have.
+                    Also, using Blender meant it would be easy to install and use in the data processing container, as
+                    opposed to a DCC like Maya that would require a license.
+                </p>
+
+                <h3 class="project-detail-subheading">System Architecture</h3>
+                <p class="project-detail-text">Below is a diagram of the system:</p>
+                <img src="../images/projects/cg-assistant/CG_Production_Data_Assistant_Diagram.png"
+                    alt="System Architecture Diagram" class="diagram-image">
+
+                <p class="project-detail-text">
+                    Antigravity with Claude Sonnet 4.5 was utilized in the development of this project, and was a great
+                    help in coding a system this large in the time frame that I had.
+                    It still required a large amount of effort and learning on my part, but allowed me to think bigger
+                    picture about the architecture of the system instead of being in the weeds of debugging.
+                </p>
+
+                <h3 class="project-detail-subheading">Technical Implementation</h3>
+                <p class="project-detail-text">
+                    In my machine learning class last semester, I learned about OpenAI's CLIP model that is able to
+                    create embeddings for both text and images.
+                    This was in the context of using CLIP for text2image diffusion models, but it seemed like a great
+                    way to allow users to both enter text descriptions of the file they are looking for, and have the
+                    system compare it against thumbnail image embeddings to find similar files.
+                    This would also allow the user to upload an image to the assistant to search for similar thumbnail
+                    images.
+                </p>
+            </div>
+
+            <!-- Technologies Used -->
+            <div class="project-detail-content">
+                <h2 class="project-detail-heading">Technologies Used</h2>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">LLMs</span>
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">Hugging Face</span>
+                    <span class="tech-tag">AWS Lambda</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">CLIP</span>
+                    <span class="tech-tag">Vector Databases</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="project-navigation">
+                <a href="../index.html" class="project-nav-button">← Back to Projects</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Cameron Detig - camerondetig@gmail.com</p>
+            <div class="footer-links">
+                <a href="https://github.com/CameronDetig" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/cameron-detig/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/project-iframe.js"></script>
+</body>
+
+</html>
