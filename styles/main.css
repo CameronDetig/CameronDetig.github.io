@@ -58,7 +58,8 @@ body {
 .nav-logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgba(0, 0, 0, 1);
+    color: var(--text-dark);
+    text-decoration: none;
 }
 
 .nav-menu {
@@ -451,6 +452,30 @@ body {
 .project-detail-text a:hover {
     text-decoration: underline;
 }
+
+.project-feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.project-feature-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.project-feature-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
 
 .project-navigation {
     max-width: 900px;

@@ -15,8 +15,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="AI-powered assistant for querying CG production data using LLMs, RAG, and vector databases. Built with AWS, LangChain, and deployed on Hugging Face.">
-    <title>CG Production Data Assistant - Cameron Detig</title>
+        content="NaviBlu Travel Assistant - AI-powered travel chatbot providing real-time flight and hotel search with natural language conversation.">
+    <title>NaviBlu Travel Assistant - Cameron Detig</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,8 +43,8 @@
     <!-- Project Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1 class="page-hero-title">CG Production Data Assistant</h1>
-            <p class="page-hero-subtitle">AI-Powered Production Data Query System</p>
+            <h1 class="page-hero-title">NaviBlu Travel Assistant</h1>
+            <p class="page-hero-subtitle">AI-Powered Travel Planning Chatbot</p>
         </div>
     </section>
 
@@ -56,8 +56,17 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Overview</h2>
                 <p class="project-detail-text">
-                    Drawing on my background in VFX / Animation, I set out on making an LLM powered assistant that would
-                    be useful to that industry.
+                    NaviBlu is an AI-powered travel assistant that makes trip planning effortless through natural
+                    conversation.
+                    Built as a group project for UNC Charlotte's Software System Design course, NaviBlu combines
+                    real-time flight and hotel data
+                    with Meta's Llama 3.3 70B language model to provide personalized travel recommendations.
+                </p>
+                <p class="project-detail-text">
+                    The chatbot handles everything from finding the cheapest flights across 400+ airlines to
+                    recommending hotels from a database
+                    of 150,000+ properties worldwide. Users can simply chat naturally about their travel plans without
+                    filling out complex forms.
                 </p>
             </div>
 
@@ -65,8 +74,8 @@
             <div class="project-embed">
                 <div class="demo-links">
                     <p class="demo-description">
-                        Try out the Assistant below, or
-                        <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank"
+                        Try out NaviBlu below, or
+                        <a href="https://huggingface.co/spaces/cameron-d/NaviBlu_Travel_Assistant" target="_blank"
                             rel="noopener noreferrer" class="direct-link">
                             open it directly on Hugging Face <span class="link-arrow">→</span>
                         </a>
@@ -78,8 +87,8 @@
                         <p style="margin-top: 1rem;">Loading interactive demo... This may take a moment if the Space is
                             starting up.</p>
                     </div>
-                    <iframe src="https://cameron-d-cg-production-assistant.hf.space" frameborder="0" width="100%"
-                        height="800" title="CG Production Assistant - Hugging Face Space" class="hf-iframe"
+                    <iframe src="https://cameron-d-naviblu-travel-assistant.hf.space" frameborder="0" width="100%"
+                        height="800" title="NaviBlu Travel Assistant - Hugging Face Space" class="hf-iframe"
                         style="display: none;"
                         allow="accelerometer; autoplay; camera; encrypted-media; fullscreen; geolocation; gyroscope; microphone; midi; payment; picture-in-picture"
                         loading="eager">
@@ -88,52 +97,59 @@
                         style="display: none; text-align: center; padding: 2rem; background-color: #fff3cd; border-radius: 8px; margin-top: 1rem;">
                         <p style="color: #856404; margin-bottom: 1rem;">⚠️ Unable to load the embedded Space. The Space
                             may be sleeping or embedding may be disabled.</p>
-                        <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank"
+                        <a href="https://huggingface.co/spaces/cameron-d/NaviBlu_Travel_Assistant" target="_blank"
                             rel="noopener noreferrer" class="error-link">Open Space in New Tab →</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Development Process -->
+            <!-- Features -->
             <div class="project-detail-content">
-                <h2 class="project-detail-heading">Development Process</h2>
-                <p class="project-detail-text">
-                    From working at The Third Floor, I was familiar with the importance of being able to quickly get
-                    information on a show or track down a specific file you're looking for.
-                    This project seemed like something that would be of real value and be a good application of the LLM
-                    / RAG techniques.
-                </p>
-                <p class="project-detail-text">
-                    The first problem to sort out was what data source I would use for the project. Luckily, Blender
-                    Studio offers open source assets from all of their <a href="https://studio.blender.org/films/"
-                        target="_blank" rel="noopener noreferrer">short films</a> going back to 2006.
-                    This provided a perfect database that could simulate the sort of production environment that a
-                    animation studio would have.
-                    Also, using Blender meant it would be easy to install and use in the data processing container, as
-                    opposed to a DCC like Maya that would require a license.
-                </p>
+                <h2 class="project-detail-heading">Key Features</h2>
+                <ul class="project-feature-list">
+                    <li><strong>Flight Search</strong> - Real-time flight pricing from 400+ airlines</li>
+                    <li><strong>Hotel Search</strong> - 150,000+ hotels across 190 countries</li>
+                    <li><strong>Location Info</strong> - Tourist attractions and activity recommendations</li>
+                    <li><strong>Natural Conversation</strong> - Talk naturally, no complex forms required</li>
+                    <li><strong>AI-Powered</strong> - Built on Meta's Llama 3.3 70B model via Groq API</li>
+                </ul>
+            </div>
 
-                <h3 class="project-detail-subheading">System Architecture</h3>
-                <p class="project-detail-text">Below is a diagram of the system:</p>
-                <img src="../images/projects/cg-assistant/CG_Production_Data_Assistant_Diagram.png"
-                    alt="System Architecture Diagram" class="diagram-image">
+            <!-- Technical Implementation -->
+            <div class="project-detail-content">
+                <h2 class="project-detail-heading">Technical Implementation</h2>
 
+                <h3 class="project-detail-subheading">Architecture</h3>
                 <p class="project-detail-text">
-                    Antigravity with Claude Sonnet 4.5 was utilized in the development of this project, and was a great
-                    help in coding a system this large in the time frame that I had.
-                    It still required a large amount of effort and learning on my part, but allowed me to think bigger
-                    picture about the architecture of the system instead of being in the weeds of debugging.
+                    NaviBlu uses an agent-based architecture where specialized agents handle different aspects of travel
+                    planning:
                 </p>
+                <ul class="project-feature-list">
+                    <li><strong>Flight Agent</strong> - Queries the fast_flights API for real-time pricing</li>
+                    <li><strong>Hotel Agent</strong> - Searches Amadeus API for accommodation options</li>
+                    <li><strong>Location Agent</strong> - Provides destination information and recommendations</li>
+                    <li><strong>General Agent</strong> - Handles conversational queries and context management</li>
+                </ul>
 
-                <h3 class="project-detail-subheading">Technical Implementation</h3>
+                <h3 class="project-detail-subheading">Technology Stack</h3>
                 <p class="project-detail-text">
-                    In my machine learning class last semester, I learned about OpenAI's CLIP model that is able to
-                    create embeddings for both text and images.
-                    This was in the context of using CLIP for text2image diffusion models, but it seemed like a great
-                    way to allow users to both enter text descriptions of the file they are looking for, and have the
-                    system compare it against thumbnail image embeddings to find similar files.
-                    This would also allow the user to upload an image to the assistant to search for similar thumbnail
-                    images.
+                    The project combines modern web technologies with powerful AI capabilities:
+                </p>
+                <ul class="project-feature-list">
+                    <li><strong>Frontend</strong> - Streamlit for the chat interface, HTML/CSS/JS for the landing page
+                    </li>
+                    <li><strong>Backend</strong> - Python with agent-based logic in core.py</li>
+                    <li><strong>LLM</strong> - Meta Llama 3.3 70B via Groq API for fast inference</li>
+                    <li><strong>APIs</strong> - fast_flights for flight data, Amadeus for hotel data</li>
+                    <li><strong>Deployment</strong> - Hugging Face Spaces for the chatbot, GitHub Pages for the website
+                    </li>
+                </ul>
+
+                <h3 class="project-detail-subheading">Team Collaboration</h3>
+                <p class="project-detail-text">
+                    Developed as part of ITCS 6112 (Software System Design and Implementation) at UNC Charlotte with a
+                    team of 4 students.
+                    I focused on the AI agent architecture, LLM integration, and deployment to Hugging Face Spaces.
                 </p>
             </div>
 
@@ -142,14 +158,12 @@
                 <h2 class="project-detail-heading">Technologies Used</h2>
                 <div class="project-tech">
                     <span class="tech-tag">Python</span>
-                    <span class="tech-tag">LLMs</span>
-                    <span class="tech-tag">LangChain</span>
-                    <span class="tech-tag">Hugging Face</span>
-                    <span class="tech-tag">AWS Lambda</span>
-                    <span class="tech-tag">PostgreSQL</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">CLIP</span>
-                    <span class="tech-tag">Vector Databases</span>
+                    <span class="tech-tag">Llama 3.3 70B</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Groq API</span>
+                    <span class="tech-tag">fast_flights API</span>
+                    <span class="tech-tag">Amadeus API</span>
+                    <span class="tech-tag">HTML/CSS/JavaScript</span>
                 </div>
             </div>
 
@@ -157,13 +171,13 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Links</h2>
                 <p class="project-detail-text">
-                    <a href="https://github.com/CameronDetig/CG_Production_Data_Assistant" target="_blank"
+                    <a href="https://github.com/ITCS-6112-Group-5/NaviBlu_Travel_Assistant" target="_blank"
                         rel="noopener noreferrer" class="direct-link">
                         View on GitHub <span class="link-arrow">→</span>
                     </a>
                 </p>
                 <p class="project-detail-text">
-                    <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank"
+                    <a href="https://huggingface.co/spaces/cameron-d/NaviBlu_Travel_Assistant" target="_blank"
                         rel="noopener noreferrer" class="direct-link">
                         Try on Hugging Face <span class="link-arrow">→</span>
                     </a>
