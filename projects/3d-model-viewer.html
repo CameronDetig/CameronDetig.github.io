@@ -26,20 +26,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo">Cameron Detig</a>
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../about.html" class="nav-link">About</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <!-- Project Hero -->
     <section class="page-hero">
@@ -57,16 +44,15 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Overview</h2>
                 <p class="project-detail-text">
-                    This project is a WebGL-based 3D model viewer built from scratch using vanilla JavaScript and WebGL.
-                    It demonstrates fundamental computer graphics concepts including 3D transformations, lighting
-                    models,
-                    and interactive camera controls—all implemented without relying on high-level 3D libraries like
+                    This project is a WebGL-based 3D model viewer built using WebGL and JavaScript.
+                    It demonstrates fundamental computer graphics concepts including 3D transformations, phong lighting,
+                    and interactive camera controls, all implemented without relying on high-level 3D libraries like
                     Three.js.
                 </p>
                 <p class="project-detail-text">
                     The viewer was developed as part of my computer graphics coursework, where I learned the low-level
                     details
-                    of how 3D rendering works in the browser. Building everything from the ground up gave me a deep
+                    of how 3D rendering works. Building everything from the ground up gave me a deep
                     understanding
                     of the graphics pipeline, shader programming, and real-time rendering techniques.
                 </p>
@@ -94,14 +80,13 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Key Features</h2>
                 <ul class="project-feature-list">
-                    <li><strong>Interactive 3D Rendering</strong> - Real-time WebGL rendering with smooth frame rates
-                    </li>
                     <li><strong>Phong Lighting Model</strong> - Point light source with ambient, diffuse, and specular
                         components</li>
-                    <li><strong>Trackball Camera Controls</strong> - Intuitive mouse-based camera rotation and
-                        navigation</li>
-                    <li><strong>Custom Shaders</strong> - Hand-written GLSL vertex and fragment shaders</li>
-                    <li><strong>No External Libraries</strong> - Built entirely with vanilla JavaScript and WebGL APIs
+                    <li><strong>Trackball Camera Controls</strong> - Quatternion based camera rotation and navigation
+                    </li>
+                    <li><strong>Shaders</strong> - GLSL vertex and fragment shaders</li>
+                    <li><strong>Transformation Controls</strong> - Scale, Rotate, and Translate controls for the 3D
+                        model
                     </li>
                 </ul>
             </div>
@@ -151,7 +136,6 @@
                     <li>How the WebGL graphics pipeline works at a low level</li>
                     <li>Writing and debugging GLSL shader code</li>
                     <li>3D mathematics including matrix transformations and vector operations</li>
-                    <li>Performance optimization for real-time rendering</li>
                     <li>The fundamentals that power modern 3D engines and frameworks</li>
                 </ul>
             </div>
@@ -160,10 +144,10 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Technologies Used</h2>
                 <div class="project-tech">
-                    <span class="tech-tag">JavaScript</span>
                     <span class="tech-tag">WebGL</span>
+                    <span class="tech-tag">JavaScript</span>
                     <span class="tech-tag">GLSL</span>
-                    <span class="tech-tag">HTML5 Canvas</span>
+                    <span class="tech-tag">HTML5</span>
                     <span class="tech-tag">Linear Algebra</span>
                 </div>
             </div>

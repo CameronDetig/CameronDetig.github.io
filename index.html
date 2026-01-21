@@ -26,20 +26,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Cameron Detig</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
@@ -54,11 +41,10 @@
         <div class="container">
             <div class="intro-content">
                 <p class="intro-text">
-                    I'm a Computer Science Master's student with a unique blend of experience in artificial intelligence
-                    and production pipelines.
-                    My work focuses on applying LLMs and machine learning to solve real-world data challenges, with
-                    hands-on experience from both
-                    academic research and professional VFX production environments.
+                    I am a Computer Science Master's student with a unique blend of experience in artificial
+                    intelligence
+                    and creative pipelines.
+                    My work focuses on applying LLMs and machine learning to solve real-world data challenges.
                 </p>
             </div>
         </div>
@@ -81,14 +67,18 @@
                     <div class="project-card-content">
                         <h3 class="project-card-title">CG Production Data Assistant</h3>
                         <p class="project-card-description">
-                            AI-powered assistant for querying CG production data using LLMs, RAG, and vector databases.
-                            Built with AWS, LangChain, and deployed on Hugging Face.
+                            Assistant for querying a database of VFX/Animation production data using LLMs, RAG, and
+                            vector embeddings.
+                            Containerized backend with LangChain running on AWS, and a frontend deployed on Hugging
+                            Face.
                         </p>
                         <div class="project-card-tech">
                             <span class="tech-tag-small">Python</span>
                             <span class="tech-tag-small">LLMs</span>
                             <span class="tech-tag-small">AWS</span>
                             <span class="tech-tag-small">LangChain</span>
+                            <span class="tech-tag-small">Docker</span>
+                            <span class="tech-tag-small">Hugging Face</span>
                         </div>
                     </div>
                 </a>
@@ -106,13 +96,13 @@
                         <p class="project-card-description">
                             AI-powered travel chatbot providing real-time flight and hotel search across 400+ airlines
                             and 150,000+ hotels.
-                            Built with Llama 3.3 70B and Streamlit.
                         </p>
                         <div class="project-card-tech">
                             <span class="tech-tag-small">Python</span>
-                            <span class="tech-tag-small">Llama 3.3</span>
+                            <span class="tech-tag-small">Llama</span>
                             <span class="tech-tag-small">Streamlit</span>
-                            <span class="tech-tag-small">APIs</span>
+                            <span class="tech-tag-small">Groq API</span>
+
                         </div>
                     </div>
                 </a>
@@ -128,15 +118,16 @@
                     <div class="project-card-content">
                         <h3 class="project-card-title">3D Model Viewer</h3>
                         <p class="project-card-description">
-                            WebGL-based 3D model viewer with interactive rendering, Phong lighting, and trackball camera
+                            WebGL-based 3D model viewer with Phong lighting and trackball camera
                             controls.
-                            Built from scratch using vanilla JavaScript and WebGL.
+                            Built using JavaScript and WebGL.
                         </p>
                         <div class="project-card-tech">
                             <span class="tech-tag-small">JavaScript</span>
                             <span class="tech-tag-small">WebGL</span>
                             <span class="tech-tag-small">GLSL</span>
                             <span class="tech-tag-small">3D Graphics</span>
+                            <span class="tech-tag-small">HTML</span>
                         </div>
                     </div>
                 </a>
@@ -152,8 +143,7 @@
                     <div class="project-card-content">
                         <h3 class="project-card-title">CIFAR-10 Image Diffusion Model</h3>
                         <p class="project-card-description">
-                            Deep learning image generation model using diffusion techniques. Trained on CIFAR-10 dataset
-                            with UNet architecture
+                            Diffusion image generation model trained on CIFAR-10 dataset. Uses a UNet architecture
                             to generate 32x32 pixel images across 10 object categories.
                         </p>
                         <div class="project-card-tech">
@@ -169,14 +159,11 @@
         </div>
     </section>
 
-    <!-- Call to Action Section -->
+    <!-- Link to About page -->
     <section class="section cta-section">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Want to learn more?</h2>
-                <p class="cta-text">
-                    Explore my background, experience, and skills in AI, machine learning, and production systems.
-                </p>
                 <a href="about.html" class="cta-button">About Me</a>
             </div>
         </div>

@@ -26,26 +26,13 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo">Cameron Detig</a>
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../about.html" class="nav-link">About</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <!-- Project Hero -->
     <section class="page-hero">
         <div class="container">
             <h1 class="page-hero-title">CIFAR-10 Image Diffusion Model</h1>
-            <p class="page-hero-subtitle">Deep Learning Image Generation with Diffusion</p>
+            <p class="page-hero-subtitle">Deep Learning Image Generation </p>
         </div>
     </section>
 
@@ -57,18 +44,25 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Overview</h2>
                 <p class="project-detail-text">
-                    This project implements a diffusion model for image generation using the CIFAR-10 dataset.
+                    This project implements a diffusion model for image generation trained using the CIFAR-10 dataset.
                     Diffusion models are a class of generative models that learn to gradually denoise random noise into
                     coherent images,
                     and have become the foundation for state-of-the-art image generation systems like DALL-E and Stable
                     Diffusion.
                 </p>
                 <p class="project-detail-text">
-                    The model was developed as part of my exploration into generative AI and deep learning.
-                    It's based on Hugging Face's Diffusion Course and demonstrates the core concepts of diffusion-based
-                    image generation
-                    on a smaller scale, generating 32x32 pixel images across 10 object categories (airplanes, cars,
+                    The model was developed as the final project for my Machine Learning class at UNC Charlotte.
+                    It is based on Hugging Face's Diffusion Course and demonstrates the core concepts of diffusion-based
+                    image generation on a smaller scale, generating 32x32 pixel images across 10 object categories
+                    (airplanes, cars,
                     birds, cats, dogs, etc.).
+                </p>
+                <p class="project-detail-text">
+                    Courses I followed during the development of this project:
+                    <li><a href="https://huggingface.co/learn/diffusion-course/en/unit0/1">
+                            Hugging Face Diffusion Models Course</a></li>
+                    <li><a href="https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+C-FX-08+V1">
+                            NVIDIA Generative AI with Diffusion Models</a></li>
                 </p>
             </div>
 
@@ -130,9 +124,9 @@
                 <ul class="project-feature-list">
                     <li><strong>UNet Architecture</strong> - Four down-sampling and up-sampling blocks with skip
                         connections</li>
-                    <li><strong>Image Size</strong> - 32x32 pixels (CIFAR-10 native resolution)</li>
-                    <li><strong>Training</strong> - 200 epochs on the full CIFAR-10 dataset</li>
                     <li><strong>Framework</strong> - PyTorch for model implementation and training</li>
+                    <li><strong>Image Size</strong> - 32x32 pixels (CIFAR-10 resolution)</li>
+                    <li><strong>Training</strong> - 200 epochs on the full CIFAR-10 dataset</li>
                 </ul>
 
                 <h3 class="project-detail-subheading">Dataset</h3>
@@ -140,8 +134,7 @@
                     The CIFAR-10 dataset consists of 60,000 32x32 color images across 10 classes:
                 </p>
                 <ul class="project-feature-list">
-                    <li>Airplane, Automobile, Bird, Cat, Deer</li>
-                    <li>Dog, Frog, Horse, Ship, Truck</li>
+                    <li>Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck</li>
                 </ul>
 
                 <h3 class="project-detail-subheading">Results & Observations</h3>
@@ -154,9 +147,7 @@
                 <h3 class="project-detail-subheading">Future Improvements</h3>
                 <ul class="project-feature-list">
                     <li>Experiment with larger, higher resolution datasets for better image quality</li>
-                    <li>Implement conditional generation to control which class is generated</li>
                     <li>Integrate CLIP for text-to-image generation capabilities</li>
-                    <li>Explore classifier-free guidance for improved sample quality</li>
                 </ul>
             </div>
 

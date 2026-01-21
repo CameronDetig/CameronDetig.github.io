@@ -50,9 +50,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 20px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr) auto minmax(auto, 1fr);
     align-items: center;
+    gap: 2rem;
 }
 
 .nav-logo {
@@ -93,6 +94,37 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    background-color: rgba(0, 102, 204, 0.1);
+    transform: translateY(-2px);
+}
+
+.social-links svg {
+    width: 20px;
+    height: 20px;
 }
 
 .hamburger {
@@ -899,8 +931,50 @@ body {
     }
 }
 
+/* Hide mobile social links on desktop */
+.nav-social-mobile {
+    display: none;
+}
+
+.nav-social-mobile a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0 0.5rem;
+}
+
+.nav-social-mobile a:hover {
+    color: var(--primary-color);
+    background-color: rgba(0, 102, 204, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Hide desktop social links on mobile */
+    .social-links-desktop {
+        display: none;
+    }
+
+    /* Show mobile social links in the menu */
+    .nav-social-mobile {
+        display: block;
+        text-align: center;
+        padding: 1rem 0;
+        border-top: 1px solid var(--border-color);
+        margin-top: 1rem;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -912,6 +986,7 @@ body {
         transition: 0.3s;
         box-shadow: var(--shadow);
         padding: 2rem 0;
+        z-index: 999;
     }
 
     .nav-menu.active {

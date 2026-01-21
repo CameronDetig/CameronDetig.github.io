@@ -26,20 +26,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo">Cameron Detig</a>
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../about.html" class="nav-link">About</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <!-- Project Hero -->
     <section class="page-hero">
@@ -57,17 +44,16 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Overview</h2>
                 <p class="project-detail-text">
-                    NaviBlu is an AI-powered travel assistant that makes trip planning effortless through natural
-                    conversation.
+                    NaviBlu is an AI-powered travel assistant designed to make trip planning effortless by allowing the
+                    user to ask natural language questions.
                     Built as a group project for UNC Charlotte's Software System Design course, NaviBlu combines
-                    real-time flight and hotel data
-                    with Meta's Llama 3.3 70B language model to provide personalized travel recommendations.
+                    real-time flight and hotel data with Meta's Llama 3.3 70B language model to provide personalized
+                    travel recommendations.
                 </p>
                 <p class="project-detail-text">
                     The chatbot handles everything from finding the cheapest flights across 400+ airlines to
-                    recommending hotels from a database
-                    of 150,000+ properties worldwide. Users can simply chat naturally about their travel plans without
-                    filling out complex forms.
+                    recommending hotels from a database of 150,000+ properties worldwide. Users can simply chat
+                    naturally about their travel plans without filling out complex forms.
                 </p>
             </div>
 
@@ -108,11 +94,15 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Key Features</h2>
                 <ul class="project-feature-list">
-                    <li><strong>Flight Search</strong> - Real-time flight pricing from 400+ airlines</li>
-                    <li><strong>Hotel Search</strong> - 150,000+ hotels across 190 countries</li>
-                    <li><strong>Location Info</strong> - Tourist attractions and activity recommendations</li>
-                    <li><strong>Natural Conversation</strong> - Talk naturally, no complex forms required</li>
-                    <li><strong>AI-Powered</strong> - Built on Meta's Llama 3.3 70B model via Groq API</li>
+                    <li><strong>Flight Search</strong> - Real-time flight pricing from 400+ airlines using the <a
+                            href="https://aweirddev.github.io/flights/" target="_blank"
+                            rel="noopener noreferrer">fast-flights</a> API</li>
+                    <li><strong>Hotel Search</strong> - 150,000+ hotels across 190 countries using the <a
+                            href="https://developers.amadeus.com/self-service/category/hotels" target="_blank"
+                            rel="noopener noreferrer">Amadeus</a> API</li>
+                    <li><strong>Destination Info</strong> - Tourist attractions and activity recommendations</li>
+                    <li><strong>AI-Powered</strong> - Built on Meta's Llama 3.3 70B model with inference via <a
+                            href="https://groq.com/" target="_blank" rel="noopener noreferrer">Groq</a> API</li>
                 </ul>
             </div>
 
@@ -126,7 +116,7 @@
                     planning:
                 </p>
                 <ul class="project-feature-list">
-                    <li><strong>Flight Agent</strong> - Queries the fast_flights API for real-time pricing</li>
+                    <li><strong>Flight Agent</strong> - Queries the fast-flights API for real-time pricing</li>
                     <li><strong>Hotel Agent</strong> - Searches Amadeus API for accommodation options</li>
                     <li><strong>Location Agent</strong> - Provides destination information and recommendations</li>
                     <li><strong>General Agent</strong> - Handles conversational queries and context management</li>
@@ -137,20 +127,19 @@
                     The project combines modern web technologies with powerful AI capabilities:
                 </p>
                 <ul class="project-feature-list">
-                    <li><strong>Frontend</strong> - Streamlit for the chat interface, HTML/CSS/JS for the landing page
+                    <li><strong>Frontend</strong> - Streamlit for the chat interface, HTML/CSS/JS for the
+                        <a href="https://itcs-6112-group-5.github.io/NaviBlu_Travel_Assistant/" target="_blank"
+                            rel="noopener noreferrer">home page</a> on GitHub Pages.
                     </li>
-                    <li><strong>Backend</strong> - Python with agent-based logic in core.py</li>
+                    <li><strong>Backend</strong> - Python with agent-based logic running on Hugging Face Spaces.</li>
                     <li><strong>LLM</strong> - Meta Llama 3.3 70B via Groq API for fast inference</li>
-                    <li><strong>APIs</strong> - fast_flights for flight data, Amadeus for hotel data</li>
-                    <li><strong>Deployment</strong> - Hugging Face Spaces for the chatbot, GitHub Pages for the website
-                    </li>
                 </ul>
 
                 <h3 class="project-detail-subheading">Team Collaboration</h3>
                 <p class="project-detail-text">
                     Developed as part of ITCS 6112 (Software System Design and Implementation) at UNC Charlotte with a
                     team of 4 students.
-                    I focused on the AI agent architecture, LLM integration, and deployment to Hugging Face Spaces.
+                    I focused on the AI agent architecture and streamlit interface.
                 </p>
             </div>
 
@@ -162,7 +151,7 @@
                     <span class="tech-tag">Llama 3.3 70B</span>
                     <span class="tech-tag">Streamlit</span>
                     <span class="tech-tag">Groq API</span>
-                    <span class="tech-tag">fast_flights API</span>
+                    <span class="tech-tag">fast-flights API</span>
                     <span class="tech-tag">Amadeus API</span>
                     <span class="tech-tag">HTML/CSS/JavaScript</span>
                 </div>

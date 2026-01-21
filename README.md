@@ -1,4 +1,4 @@
-# Storage Analytics Portfolio Site
+# Cameron Detig Portfolio Site
 
 This site showcases projects, experience, education, and skills with a focus on AI/ML technologies.
 
@@ -6,7 +6,7 @@ Take a look! https://camerondetig.github.io/
 
 
 ## Features
-  - Featured Projects with development process
+  - Featured Projects with development processes
   - About Me
   - Education
   - Experience
