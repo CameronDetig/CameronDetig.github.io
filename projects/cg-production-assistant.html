@@ -32,7 +32,7 @@
     <section class="page-hero">
         <div class="container">
             <h1 class="page-hero-title">CG Production Data Assistant</h1>
-            <p class="page-hero-subtitle">AI-Powered Production Data Query System</p>
+            <p class="page-hero-subtitle">LLM-Powered chatbot for providing information on CG production assets</p>
         </div>
     </section>
 
@@ -44,8 +44,7 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Overview</h2>
                 <p class="project-detail-text">
-                    Drawing on my background in VFX / Animation, I set out on making an LLM powered assistant that would
-                    be useful to that industry.
+                    Assistant built with a containerized AWS Lambda backend, langchain, Bedrock models, and PostgreSQL integration. Providing information on a database of CG production assets based on natural language queries.
                 </p>
             </div>
 
@@ -142,6 +141,27 @@
                 </p>
                 <img src="../images/projects/cg-assistant/LangGraph_Diagram.jpg"
                     alt="LangGraph Agent Diagram" class="diagram-image">
+
+
+                <h3 class="project-detail-subheading">Blender Addon Frontend (Work in Progress)</h3>
+                <img src="../images/projects/cg-assistant/blender_frontend.jpg"
+                    alt="Blender Frontend" class="diagram-image">  
+                <p class="project-detail-text">I am also working on a Blender addon that provides a frontend for the assistant directly in the Blender UI.
+                    This has all the same functionality of the gradio frontend, but also allows the user to take a snapshot render of their active vieport to use in the chatbot for similarity search in the database.
+                    This is still a work in progress and will require some more polishing.
+                </p>
+
+                
+                <h3 class="project-detail-subheading">Future Plans</h3>
+                <p class="project-detail-text"> There are a few features that I'd like to implement in the future that I haven't been able to get to yet.
+                </p>
+                <ul>
+                    <li>It should be possible to either train a custom ML model or find an existing one that can classify the shot type of film stills like Close up, Medium Shot, etc. 
+                        Then this could be added as part of the metadata tags to allow for search based on these parameters.</li>
+                    <li>To have a UI for the chatbot integrated into ShotGrid (Flow Production Tracking) would make it more convenient to use the assistant, particularly for production staff.</li>
+                    <li>Right now the system is mainly built for archived data. It would be great to add functionality for active shows to scan new files into the database as they are created and remove them as they are deleted. 
+                        Possibly using an integration with Perforce to detect when files are changed.</li>
+                </ul>
 
             </div>
 
