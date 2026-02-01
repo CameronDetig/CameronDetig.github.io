@@ -44,7 +44,9 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Overview</h2>
                 <p class="project-detail-text">
-                    Assistant built with a containerized AWS Lambda backend, langchain, Bedrock models, and PostgreSQL integration. Providing information on a database of CG production assets based on natural language queries.
+                    Assistant built with a containerized AWS Lambda backend, langchain, Bedrock models, and PostgreSQL
+                    integration. Providing information on a database of CG production assets based on natural language
+                    queries.
                 </p>
             </div>
 
@@ -137,29 +139,40 @@
                 <p class="project-detail-text">
                     The chatbot agent itself is built using LangGraph, a library for building agentic systems.
                     It allows for the creation of complex execution flows that can route queries to different processes.
-                    This system includes a number nodes to determine the type of query, embed user input, generate SQL, and output the results.
+                    This system includes a number nodes to determine the type of query, embed user input, generate SQL,
+                    and output the results.
                 </p>
-                <img src="../images/projects/cg-assistant/LangGraph_Diagram.jpg"
-                    alt="LangGraph Agent Diagram" class="diagram-image">
+                <img src="../images/projects/cg-assistant/LangGraph_Diagram.jpg" alt="LangGraph Agent Diagram"
+                    class="diagram-image" style="max-width: 75%; margin: 1rem auto; display: block;">
 
 
                 <h3 class="project-detail-subheading">Blender Addon Frontend (Work in Progress)</h3>
-                <img src="../images/projects/cg-assistant/blender_frontend.jpg"
-                    alt="Blender Frontend" class="diagram-image">  
-                <p class="project-detail-text">I am also working on a Blender addon that provides a frontend for the assistant directly in the Blender UI.
-                    This has all the same functionality of the gradio frontend, but also allows the user to take a snapshot render of their active vieport to use in the chatbot for similarity search in the database.
+                <img src="../images/projects/cg-assistant/blender_frontend.jpg" alt="Blender Frontend"
+                    class="diagram-image" style="max-width: 60%; margin: 1rem auto; display: block;">
+                <p class="project-detail-text">I am also working on a Blender addon that provides a frontend for the
+                    assistant directly in the Blender UI.
+                    This has all the same functionality of the gradio frontend, but also allows the user to take a
+                    snapshot render of their active viewport to use in the chatbot for similarity search in the
+                    database.
+                    It will also have functionality to directly download and open blend files from the database.
                     This is still a work in progress and will require some more polishing.
                 </p>
 
-                
+
                 <h3 class="project-detail-subheading">Future Plans</h3>
-                <p class="project-detail-text"> There are a few features that I'd like to implement in the future that I haven't been able to get to yet.
+                <p class="project-detail-text"> There are a few features that I'd like to implement in the future that I
+                    haven't been able to get to yet.
                 </p>
                 <ul>
-                    <li>It should be possible to either train a custom ML model or find an existing one that can classify the shot type of film stills like Close up, Medium Shot, etc. 
-                        Then this could be added as part of the metadata tags to allow for search based on these parameters.</li>
-                    <li>To have a UI for the chatbot integrated into ShotGrid (Flow Production Tracking) would make it more convenient to use the assistant, particularly for production staff.</li>
-                    <li>Right now the system is mainly built for archived data. It would be great to add functionality for active shows to scan new files into the database as they are created and remove them as they are deleted. 
+                    <li>It should be possible to either train a custom ML model or find an existing one that can
+                        classify the shot type of film stills like Close up, Medium Shot, etc.
+                        Then this could be added as part of the metadata tags to allow for search based on these
+                        parameters.</li>
+                    <li>To have a UI for the chatbot integrated into ShotGrid (Flow Production Tracking) would make it
+                        more convenient to use the assistant, particularly for production staff.</li>
+                    <li>Right now the system is mainly built for archived data. It would be great to add functionality
+                        for active shows to scan new files into the database as they are created and remove them as they
+                        are deleted.
                         Possibly using an integration with Perforce to detect when files are changed.</li>
                 </ul>
 

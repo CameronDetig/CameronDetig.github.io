@@ -44,10 +44,9 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Overview</h2>
                 <p class="project-detail-text">
-                    This project is a WebGL-based 3D model viewer built using WebGL and JavaScript.
-                    It demonstrates fundamental computer graphics concepts including 3D transformations, phong lighting,
-                    and interactive camera controls, all implemented without relying on high-level 3D libraries like
-                    Three.js.
+                    Browser-based 3D model viewer built using WebGL and JavaScript.
+                    Demonstrates fundamental computer graphics concepts including 3D transformations, Phong lighting,
+                    and interactive camera controls, all implemented without high-level 3D libraries like Three.js.
                 </p>
                 <p class="project-detail-text">
                     The viewer was developed as part of my computer graphics coursework, where I learned the low-level
@@ -65,7 +64,7 @@
                         Try out the 3D Model Viewer below, or
                         <a href="https://camerondetig.github.io/3D_Model_Viewer/" target="_blank"
                             rel="noopener noreferrer" class="direct-link">
-                            open it in a new tab <span class="link-arrow">→</span>
+                            open in a new tab <span class="link-arrow">→</span>
                         </a>
                     </p>
                 </div>
@@ -76,12 +75,21 @@
                 </div>
             </div>
 
-            <!-- Features -->
+            <!-- Key Features -->
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Key Features</h2>
                 <ul class="project-feature-list">
-                    <li><strong>Phong Lighting Model</strong> - Point light source with ambient, diffuse, and specular
-                        components</li>
+                    <li><strong>Phong Lighting Model</strong> - Point light source creates realistic lighting effects by
+                        combining three components:
+                        <ul class="project-feature-list"
+                            style="margin-top: 0.5rem; margin-bottom: 0.5rem; padding-left: 2rem;">
+                            <li><strong>Ambient</strong> - Base lighting that illuminates all surfaces equally</li>
+                            <li><strong>Diffuse</strong> - Directional lighting based on surface normal and light
+                                direction</li>
+                            <li><strong>Specular</strong> - Shiny highlights based on viewing angle and light reflection
+                            </li>
+                        </ul>
+                    </li>
                     <li><strong>Trackball Camera Controls</strong> - Quatternion based camera rotation and navigation
                     </li>
                     <li><strong>Shaders</strong> - GLSL vertex and fragment shaders</li>
@@ -91,44 +99,10 @@
                 </ul>
             </div>
 
-            <!-- Technical Implementation -->
+            <!-- Takeaways -->
             <div class="project-detail-content">
-                <h2 class="project-detail-heading">Technical Implementation</h2>
+                <h2 class="project-detail-heading">Takeaways</h2>
 
-                <h3 class="project-detail-subheading">Graphics Pipeline</h3>
-                <p class="project-detail-text">
-                    The viewer implements the full WebGL graphics pipeline from scratch:
-                </p>
-                <ul class="project-feature-list">
-                    <li><strong>Vertex Processing</strong> - Model-view-projection matrix transformations in vertex
-                        shader</li>
-                    <li><strong>Rasterization</strong> - WebGL handles conversion of 3D geometry to screen pixels</li>
-                    <li><strong>Fragment Shading</strong> - Phong lighting calculations per-pixel in fragment shader
-                    </li>
-                    <li><strong>Frame Buffer</strong> - Final rendered output to HTML5 canvas element</li>
-                </ul>
-
-                <h3 class="project-detail-subheading">Lighting Model</h3>
-                <p class="project-detail-text">
-                    The Phong lighting model creates realistic lighting effects by combining three components:
-                </p>
-                <ul class="project-feature-list">
-                    <li><strong>Ambient</strong> - Base lighting that illuminates all surfaces equally</li>
-                    <li><strong>Diffuse</strong> - Directional lighting based on surface normal and light direction</li>
-                    <li><strong>Specular</strong> - Shiny highlights based on viewing angle and light reflection</li>
-                </ul>
-
-                <h3 class="project-detail-subheading">Camera Controls</h3>
-                <p class="project-detail-text">
-                    The trackball camera system allows intuitive 3D navigation:
-                </p>
-                <ul class="project-feature-list">
-                    <li><strong>Rotation</strong> - Click and drag to rotate the model in any direction</li>
-                    <li><strong>Smooth Motion</strong> - Quaternion-based rotations prevent gimbal lock</li>
-                    <li><strong>View Matrix</strong> - Real-time camera transformation updates</li>
-                </ul>
-
-                <h3 class="project-detail-subheading">Learning Outcomes</h3>
                 <p class="project-detail-text">
                     Building this viewer from scratch taught me:
                 </p>

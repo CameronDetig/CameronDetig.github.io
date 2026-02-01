@@ -98,40 +98,42 @@
 
                 <h3 class="project-detail-subheading">Volumetric Motion Capture</h3>
                 <p class="project-detail-text">
-                    Traditional motion capture uses markers placed on a subject's body to track movement. Volumetric
-                    motion capture,
-                    in contrast, uses multiple cameras to capture the full 3D volume of a subject without markers,
-                    producing detailed mesh sequences.
-                    This addon bridges the gap between volumetric capture data and traditional skeleton-based animation
-                    workflows.
+                    Traditional motion capture requires the subject to weat a suit with markers distributed across the
+                    body to track movement.
+                    In contrast, volumetric motion capture uses multiple cameras to capture the full 3D volume of a
+                    subject without them having to wear a suit, producing detailed mesh sequences.
+                    This project seeks to leverage the less restrictive nature of volumetric capture to extract movement
+                    data similar to traditional motion capture.
                 </p>
 
                 <!-- System Diagram -->
                 <div class="project-detail-content">
                     <h3 class="project-detail-subheading">System Overview</h2>
-                    <img src="../images/projects/volumetric-mocap/diagram.png" alt="System Diagram" class="diagram-image">
+                        <img src="../images/projects/volumetric-mocap/diagram.png" alt="System Diagram"
+                            class="diagram-image">
                 </div>
 
                 <h3 class="project-detail-subheading">Skeleton Extraction Process</h3>
                 <p class="project-detail-text">
                     The tool uses the Iterative Closest Point (ICP) algorithm to align joint markers to the volumetric
                     mesh data frame by frame.
-                    This allows researchers and animators to extract meaningful skeletal motion data from markerless
-                    capture sessions.
+                    This allows skeletal motion data to be extracted from markerless capture sessions.
                 </p>
                 <ul class="project-feature-list">
-                    <li><strong>ICP Algorithm</strong> - Utilizes Christopher Gearhart's ICP implementation for precise
-                        point alignment</li>
+                    <li><strong>ICP Algorithm</strong> - Utilizes Christopher Gearhart's existing <a
+                            href="https://github.com/patmo141/object_alignment">Blender implementation
+                            of ICP</a> for precise mesh alignment</li>
                     <li><strong>Frame-by-Frame Processing</strong> - Processes mesh sequences to track joint positions
                         over time</li>
-                    <li><strong>Blender Integration</strong> - Seamlessly integrates into Blender's 3D workflow</li>
+                    <li><strong>Data Exporter</strong> - Custom exporter allows for data to be saved in the .trc format
+                        required for analysis in OpenSim</li>
                 </ul>
 
                 <h3 class="project-detail-subheading">Applications</h3>
                 <ul class="project-feature-list">
-                    <li><strong>Biomedical Analysis</strong> - Identify strenuous movements and analyze athlete
-                        performance</li>
-                    <li><strong>Film & Animation</strong> - Extract skeleton data for use in traditional animation
+                    <li><strong>Biomedical Analysis</strong> - Identify strenuous movements and help athletes recover
+                        after injury or surgery</li>
+                    <li><strong>Film & Animation</strong> - Extract skeleton data for use in animation
                         pipelines</li>
                     <li><strong>Research</strong> - Enable biomechanical studies using volumetric capture data</li>
                 </ul>
@@ -143,10 +145,9 @@
                 <div class="project-tech">
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Blender</span>
-                    <span class="tech-tag">ICP Algorithm</span>
                     <span class="tech-tag">3D Graphics</span>
                     <span class="tech-tag">Motion Capture</span>
-                    <span class="tech-tag">Biomechanics</span>
+                    <span class="tech-tag">ICP Algorithm</span>
                 </div>
             </div>
 
