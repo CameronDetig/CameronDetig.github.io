@@ -20,7 +20,7 @@ Then open http://localhost:3000/. A server is required (not `file://`) because t
 - **Shared navbar**: `components/navbar.html` is a template injected into `<div id="navbar-placeholder">` by `loadNavbar()` in `scripts/main.js`. It substitutes `{{baseUrl}}` (`../` when the URL path contains `/projects/`, else empty) and `{{homeActive}}`/`{{aboutActive}}`. Edit nav links/social icons in the component only. Adding a new top-level nav page requires a new placeholder in the template and matching replacement logic in `main.js`.
 - **Every page** loads `scripts/main.js` at the end of `<body>`.
 - **Embedded demos**: project pages embed live demos via iframes — Hugging Face Spaces (`*.hf.space`), the separate `3D_Model_Viewer` GitHub Pages repo, or Vimeo. Hugging Face embeds use the `.huggingface-embed` block with `#hf-loading`, an `iframe.hf-iframe` initially `display: none`, and `#hf-error`; these pages must also include `scripts/project-iframe.js`, which manages the loading/error states (with timeouts to accommodate sleeping Spaces that take 20–30s to wake).
-- **Styling**: all CSS is in `styles/main.css`; theme colors and shadows are CSS custom properties on `:root`.
+- **Styling**: all CSS is in `styles/main.css`; theme colors and shadows are CSS custom properties on `:root`. Every page links it as `main.css?v=N` for cache busting — when you change the CSS, bump `N` on all pages (`index.html`, `about.html`, `projects/*.html`) together.
 - **Images**: project assets live in `images/projects/<project-slug>/` (e.g. `thumbnail.png` used by the home page cards).
 
 ## Adding a project
