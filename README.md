@@ -7,10 +7,12 @@ Take a look! https://camerondetig.github.io/
 
 ## Features
   - Featured Projects with development processes
+  - VFX & Animation work (previs reels, animation, rigging, 3D)
   - About Me
   - Education
   - Experience
   - Skills
+  - Resume
   - Contact 
 
 

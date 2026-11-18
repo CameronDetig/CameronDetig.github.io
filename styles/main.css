@@ -935,6 +935,302 @@ body {
     box-shadow: var(--shadow);
 }
 
+/* About: profile photo + intro */
+.about-intro {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-photo {
+    flex: 0 0 240px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow-hover);
+}
+
+.about-intro .about-content {
+    margin: 0;
+}
+
+/* About: resume */
+.resume-section {
+    background-color: var(--bg-light);
+}
+
+.resume-preview {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.resume-preview embed {
+    display: block;
+    width: 100%;
+    height: 800px;
+    border-radius: 8px;
+}
+
+.resume-download {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.resume-download .cta-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.resume-download .cta-button:hover {
+    background-color: #0052a3;
+}
+
+/* Home CTA: multiple buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* VFX & Animation page */
+.vfx-section {
+    background-color: var(--bg-light);
+}
+
+.intro-note {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.intro-note a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.work-card {
+    min-width: 0;
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 1.75rem;
+}
+
+.work-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.work-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.work-card-description {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.work-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.work-media {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+
+img.work-media {
+    cursor: zoom-in;
+    transition: opacity 0.3s ease;
+}
+
+img.work-media:hover {
+    opacity: 0.85;
+}
+
+/* Lightbox (VFX & Animation page) */
+.lightbox {
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    /* side padding leaves room for the prev/next buttons */
+    padding: 64px 80px;
+    border: none;
+    background: transparent;
+    cursor: zoom-out;
+}
+
+.lightbox[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-close,
+.lightbox-nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.lightbox-nav {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-prev {
+    left: 1rem;
+}
+
+.lightbox-next {
+    right: 1rem;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.lightbox.single .lightbox-nav,
+.lightbox.single .lightbox-counter {
+    display: none;
+}
+
+.lightbox-close:focus-visible,
+.lightbox-nav:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .about-intro {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-photo {
+        flex-basis: auto;
+        width: 180px;
+        height: 180px;
+    }
+
+    .resume-preview embed {
+        height: 500px;
+    }
+
+    .work-grid,
+    .work-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card {
+        padding: 1.25rem;
+    }
+
+    .lightbox {
+        padding: 64px 8px;
+    }
+
+    .lightbox-nav {
+        top: auto;
+        bottom: 1rem;
+        transform: none;
+    }
+}
+
 /* Footer */
 .footer {
     background-color: var(--text-dark);
