@@ -18,10 +18,10 @@
     <meta name="description"
         content="Portfolio showcasing AI and machine learning projects by Cameron Detig, AI Engineer with an MS in Computer Science.">
     <title>Cameron Detig - AI & Software Development Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css?v=3">
+    <link rel="stylesheet" href="styles/main.css?v=7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -31,20 +31,17 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Hello, I'm Cameron 👋</h1>
-            <p class="hero-subtitle">Building AI-powered solutions at the intersection of technology and creativity</p>
-        </div>
-    </section>
-
-    <!-- Introduction Section -->
-    <section class="section intro-section">
-        <div class="container">
-            <div class="intro-content">
-                <p class="intro-text">
-                    I am an AI Engineer with a Master's in Computer Science and a unique blend of experience in
-                    artificial intelligence and creative pipelines.
-                    My work focuses on applying LLMs and machine learning to solve real-world challenges.
-                </p>
+            <p class="eyebrow">AI Engineer · Previs Artist</p>
+            <h1 class="hero-title">Hello, I'm Cameron.</h1>
+            <p class="hero-subtitle">Building AI-powered solutions at the intersection of technology and creativity.</p>
+            <p class="hero-description">
+                I am an AI Engineer with a Master's in Computer Science and a unique blend of experience in
+                artificial intelligence and creative pipelines.
+                My work focuses on applying LLMs and machine learning to solve real-world challenges.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="cta-button">View projects</a>
+                <a href="vfx-animation.html" class="cta-button cta-button-secondary">VFX &amp; Animation reels</a>
             </div>
         </div>
     </section>
@@ -52,7 +49,10 @@
     <!-- Projects Gallery Section -->
     <section id="projects" class="section projects-section">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-header-note">AI, ML and graphics work</p>
+            </div>
             <div class="projects-grid">
 
                 <!-- Project 1: CG Production Data Assistant -->
@@ -182,6 +182,33 @@
         </div>
     </section>
 
+    <!-- VFX & Animation teaser -->
+    <section class="section vfx-teaser">
+        <div class="container vfx-teaser-inner">
+            <div class="vfx-teaser-text">
+                <p class="eyebrow">VFX &amp; Animation</p>
+                <h2 class="vfx-teaser-title">Previs for Ahsoka and Predator: Killer of Killers</h2>
+                <p>Reels from my time at The Third Floor, plus personal animation, Unreal Engine rigging, Maya tools
+                    and 3D renders.</p>
+                <a href="vfx-animation.html" class="direct-link">See the reels <span class="link-arrow">→</span></a>
+            </div>
+            <div class="vfx-teaser-media">
+                <img class="wide" src="images/vfx-animation/render-final.webp" alt="3D render" width="1920"
+                    height="1080" loading="lazy">
+                <img src="images/vfx-animation/buggy-control-rig-poster.jpg" alt="Unreal Engine control rig for a buggy"
+                    width="1280" height="720" loading="lazy">
+                <a href="vfx-animation.html" class="vfx-teaser-reel">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.6" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M10 8l6 4-6 4z"></path>
+                    </svg>
+                    Ahsoka Previs Reel
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Link to About page -->
     <section class="section cta-section">
         <div class="container">
@@ -189,7 +216,7 @@
                 <h2 class="cta-title">Want to learn more?</h2>
                 <div class="cta-buttons">
                     <a href="about.html" class="cta-button">About Me</a>
-                    <a href="vfx-animation.html" class="cta-button">VFX & Animation Work</a>
+                    <a href="vfx-animation.html" class="cta-button cta-button-secondary">VFX &amp; Animation Work</a>
                 </div>
             </div>
         </div>
