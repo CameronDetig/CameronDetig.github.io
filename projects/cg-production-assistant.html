@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/webp" href="../images/favicon.webp">
     <meta name="description"
-        content="AI-powered assistant for querying CG production data using LLMs, RAG, and vector databases. Built with AWS, LangChain, and deployed on Hugging Face.">
+        content="AI-powered assistant for querying CG production data using LLMs, RAG, and vector databases. Built with AWS, LangChain, and with the frontend hosted on AWS CloudFront.">
     <title>CG Production Data Assistant - Cameron Detig</title>
     <link rel="stylesheet" href="../styles/main.css?v=7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,30 +65,28 @@
                 <div class="demo-links">
                     <p class="demo-description">
                         Try out the Assistant below, or
-                        <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank"
+                        <a href="https://d2wzq5ood2viu0.cloudfront.net/" target="_blank"
                             rel="noopener noreferrer" class="direct-link">
-                            open it directly on Hugging Face <span class="link-arrow">→</span>
+                            open it directly in a new tab <span class="link-arrow">→</span>
                         </a>
                     </p>
                 </div>
                 <div class="huggingface-embed">
                     <div id="hf-loading" style="text-align: center; padding: 2rem; color: var(--text-light);">
                         <div class="loading-spinner"></div>
-                        <p style="margin-top: 1rem;">Loading interactive demo... This may take a moment if the Space is
-                            starting up.</p>
+                        <p style="margin-top: 1rem;">Loading interactive demo...</p>
                     </div>
-                    <iframe src="https://cameron-d-cg-production-assistant.hf.space" frameborder="0" width="100%"
-                        height="800" title="CG Production Assistant - Hugging Face Space" class="hf-iframe"
+                    <iframe src="https://d2wzq5ood2viu0.cloudfront.net/" frameborder="0" width="100%"
+                        height="800" title="CG Production Assistant" class="hf-iframe"
                         style="display: none;"
                         allow="accelerometer; autoplay; camera; encrypted-media; fullscreen; geolocation; gyroscope; microphone; midi; payment; picture-in-picture"
                         loading="eager">
                     </iframe>
                     <div id="hf-error"
                         style="display: none; text-align: center; padding: 2rem; background-color: var(--tag-bg); border: 1px solid var(--border-strong); border-radius: 10px; margin-top: 1rem;">
-                        <p style="color: var(--tag-text); margin-bottom: 1rem;">⚠️ Unable to load the embedded Space. The Space
-                            may be sleeping or embedding may be disabled.</p>
-                        <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank"
-                            rel="noopener noreferrer" class="error-link">Open Space in New Tab →</a>
+                        <p style="color: var(--tag-text); margin-bottom: 1rem;">⚠️ Unable to load the embedded demo.</p>
+                        <a href="https://d2wzq5ood2viu0.cloudfront.net/" target="_blank"
+                            rel="noopener noreferrer" class="error-link">Open Demo in New Tab →</a>
                     </div>
                 </div>
             </div>
@@ -185,7 +183,7 @@
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">LLMs</span>
                     <span class="tech-tag">LangChain</span>
-                    <span class="tech-tag">Hugging Face</span>
+                    <span class="tech-tag">AWS CloudFront</span>
                     <span class="tech-tag">AWS Lambda</span>
                     <span class="tech-tag">PostgreSQL</span>
                     <span class="tech-tag">Docker</span>
@@ -204,9 +202,9 @@
                     </a>
                 </p>
                 <p class="project-detail-text">
-                    <a href="https://huggingface.co/spaces/cameron-d/cg-production-assistant" target="_blank"
+                    <a href="https://d2wzq5ood2viu0.cloudfront.net/" target="_blank"
                         rel="noopener noreferrer" class="direct-link">
-                        Try on Hugging Face <span class="link-arrow">→</span>
+                        Try the Live Demo <span class="link-arrow">→</span>
                     </a>
                 </p>
             </div>
