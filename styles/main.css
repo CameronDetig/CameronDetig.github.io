@@ -1377,21 +1377,9 @@ img.work-media:hover {
     font-size: 0.9rem;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 0.75rem;
-}
-
-.footer-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--accent);
+/* Reserve footer height so the page doesn't jump when the component loads */
+#footer-placeholder {
+    min-height: 5.5rem;
 }
 
 /* Animations */

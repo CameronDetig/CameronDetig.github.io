@@ -33,6 +33,21 @@ async function loadNavbar() {
     }
 }
 
+// Load Footer Component
+async function loadFooter() {
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (!footerPlaceholder) return;
+
+    const baseUrl = window.location.pathname.includes('/projects/') ? '../' : '';
+
+    try {
+        const response = await fetch(`${baseUrl}components/footer.html`);
+        footerPlaceholder.innerHTML = await response.text();
+    } catch (error) {
+        console.error('Error loading footer:', error);
+    }
+}
+
 // Mobile Navigation Toggle
 function initializeMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
@@ -57,8 +72,10 @@ function initializeMobileMenu() {
 // Load navbar when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadNavbar);
+    document.addEventListener('DOMContentLoaded', loadFooter);
 } else {
     loadNavbar();
+    loadFooter();
 }
 
 // Mobile Navigation Toggle (fallback for pages without component loader)
