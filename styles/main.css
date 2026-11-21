@@ -1607,3 +1607,126 @@ img.work-media:hover {
         font-size: 1.6rem;
     }
 }
+
+/* VFX & Animation: production posters */
+.posters-card {
+    margin-bottom: 24px;
+    padding: 1.75rem 1.5rem 1.5rem;
+    text-align: center;
+}
+
+.posters-card .work-card-description {
+    margin-bottom: 1.5rem;
+}
+
+.posters-featured,
+.posters-small {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.posters-featured {
+    gap: 28px;
+}
+
+.posters-small {
+    gap: 20px;
+}
+
+.poster-figure {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.posters-featured {
+    flex-wrap: nowrap;
+}
+
+.posters-featured .poster-figure {
+    flex: 0 1 260px;
+    min-width: 0;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .posters-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .posters-featured {
+        gap: 16px;
+    }
+
+    .posters-featured .poster-figure figcaption {
+        font-size: 0.8125rem;
+    }
+}
+
+.posters-small .poster-figure {
+    flex: 0 1 96px;
+}
+
+/* On wider screens keep all seven posters on one row, shrinking if needed */
+@media (min-width: 769px) {
+    .posters-small {
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+
+    .posters-small .poster-figure {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 96px;
+    }
+}
+
+.poster {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.posters-featured .poster {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.poster:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-hover);
+}
+
+.poster-figure figcaption {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    color: var(--text-muted);
+}
+
+.posters-featured .poster-figure figcaption {
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--text-soft);
+}
+
+.posters-divider {
+    border: 0;
+    height: 1px;
+    background: var(--border);
+    margin: 1.5rem 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .poster {
+        transition: none;
+    }
+
+    .poster:hover {
+        transform: none;
+    }
+}
