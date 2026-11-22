@@ -18,7 +18,7 @@
     <meta name="description"
         content="AI-powered assistant for querying CG production data using LLMs, RAG, and vector databases. Built with AWS, LangChain, and with the frontend hosted on AWS CloudFront.">
     <title>CG Production Data Assistant - Cameron Detig</title>
-    <link rel="stylesheet" href="../styles/main.css?v=31">
+    <link rel="stylesheet" href="../styles/main.css?v=33">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -60,35 +60,10 @@
                 </p>
             </div>
 
-            <!-- Interactive Demo -->
-            <div class="project-embed">
-                <div class="demo-links">
-                    <p class="demo-description">
-                        Try out the Assistant below, or
-                        <a href="https://d2wzq5ood2viu0.cloudfront.net/" target="_blank"
-                            rel="noopener noreferrer" class="direct-link">
-                            open it directly in a new tab <span class="link-arrow">→</span>
-                        </a>
-                    </p>
-                </div>
-                <div class="huggingface-embed">
-                    <div id="hf-loading" style="text-align: center; padding: 2rem; color: var(--text-light);">
-                        <div class="loading-spinner"></div>
-                        <p style="margin-top: 1rem;">Loading interactive demo...</p>
-                    </div>
-                    <iframe src="https://d2wzq5ood2viu0.cloudfront.net/" frameborder="0" width="100%"
-                        height="800" title="CG Production Assistant" class="hf-iframe"
-                        style="display: none;"
-                        allow="accelerometer; autoplay; camera; encrypted-media; fullscreen; geolocation; gyroscope; microphone; midi; payment; picture-in-picture"
-                        loading="eager">
-                    </iframe>
-                    <div id="hf-error"
-                        style="display: none; text-align: center; padding: 2rem; background-color: var(--tag-bg); border: 1px solid var(--border-strong); border-radius: 10px; margin-top: 1rem;">
-                        <p style="color: var(--tag-text); margin-bottom: 1rem;">⚠️ Unable to load the embedded demo.</p>
-                        <a href="https://d2wzq5ood2viu0.cloudfront.net/" target="_blank"
-                            rel="noopener noreferrer" class="error-link">Open Demo in New Tab →</a>
-                    </div>
-                </div>
+            <!-- Thumbnail -->
+            <div class="project-detail-content">
+                <img src="../images/technical/cg-assistant/thumbnail.jpg" alt="CG Production Data Assistant"
+                    class="diagram-image">
             </div>
 
             <!-- Development Process -->
@@ -112,7 +87,7 @@
 
                 <h3 class="project-detail-subheading">System Architecture</h3>
                 <p class="project-detail-text">Below is a diagram of the system:</p>
-                <img src="../images/projects/cg-assistant/CG_Production_Data_Assistant_Diagram.jpg"
+                <img src="../images/technical/cg-assistant/CG_Production_Data_Assistant_Diagram.jpg"
                     alt="System Architecture Diagram" class="diagram-image">
 
                 <p class="project-detail-text">
@@ -140,12 +115,12 @@
                     This system includes a number nodes to determine the type of query, embed user input, generate SQL,
                     and output the results.
                 </p>
-                <img src="../images/projects/cg-assistant/LangGraph_Diagram.jpg" alt="LangGraph Agent Diagram"
+                <img src="../images/technical/cg-assistant/LangGraph_Diagram.jpg" alt="LangGraph Agent Diagram"
                     class="diagram-image" style="max-width: 75%; margin: 1rem auto; display: block;">
 
 
                 <h3 class="project-detail-subheading">Blender Addon Frontend (Work in Progress)</h3>
-                <img src="../images/projects/cg-assistant/blender_frontend.jpg" alt="Blender Frontend"
+                <img src="../images/technical/cg-assistant/blender_frontend.jpg" alt="Blender Frontend"
                     class="diagram-image" style="max-width: 60%; margin: 1rem auto; display: block;">
                 <p class="project-detail-text">I am also working on a Blender addon that provides a frontend for the
                     assistant directly in the Blender UI.
@@ -158,19 +133,16 @@
 
 
                 <h3 class="project-detail-subheading">Future Plans</h3>
-                <p class="project-detail-text"> There are a few features that I'd like to implement in the future that I
-                    haven't been able to get to yet.
+                <p class="project-detail-text"> There are a few features that I'd like to implement in the future.
                 </p>
-                <ul>
-                    <li>It should be possible to either train a custom ML model or find an existing one that can
-                        classify the shot type of film stills like Close up, Medium Shot, etc.
-                        Then this could be added as part of the metadata tags to allow for search based on these
-                        parameters.</li>
-                    <li>To have a UI for the chatbot integrated into ShotGrid (Flow Production Tracking) would make it
+                <ul class="project-feature-list">
+                    <li>An MCP for the system to allow AI Agents to access it.</li>
+                    <li>To have a UI for the chatbot integrated into Flow Production Tracking (ShotGrid) could make it
                         more convenient to use the assistant, particularly for production staff.</li>
+                    <li>I am interested to try and train an ML model to classify the shot type of film stills like Close up, Medium Shot, etc.
+                        Then this could be added as part of the metadata tags to allow for search based on those parameters.</li>
                     <li>Right now the system is mainly built for archived data. It would be great to add functionality
-                        for active shows to scan new files into the database as they are created and remove them as they
-                        are deleted.
+                        for active shows to scan new files into the database as they are created and remove them as they are deleted. 
                         Possibly using an integration with Perforce to detect when files are changed.</li>
                 </ul>
 
@@ -196,15 +168,21 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Links</h2>
                 <p class="project-detail-text">
-                    <a href="https://github.com/CameronDetig/CG_Production_Data_Assistant" target="_blank"
+                    <a href="https://github.com/CameronDetig/CG_Production_Metadata_Extractor" target="_blank"
                         rel="noopener noreferrer" class="direct-link">
-                        View on GitHub <span class="link-arrow">→</span>
+                        View Metadata Extractor on GitHub <span class="link-arrow">→</span>
+                    </a>
+                </p>
+                <p class="project-detail-text">
+                    <a href="https://github.com/CameronDetig/CG_Production_LLM_Assistant" target="_blank"
+                        rel="noopener noreferrer" class="direct-link">
+                        View LLM Assistant on GitHub <span class="link-arrow">→</span>
                     </a>
                 </p>
                 <p class="project-detail-text">
                     <a href="https://d2wzq5ood2viu0.cloudfront.net/" target="_blank"
                         rel="noopener noreferrer" class="direct-link">
-                        Try the Live Demo <span class="link-arrow">→</span>
+                        Try it out <span class="link-arrow">→</span>
                     </a>
                 </p>
             </div>
@@ -221,7 +199,6 @@
     <div id="footer-placeholder"></div>
 
     <script src="../scripts/main.js"></script>
-    <script src="../scripts/project-iframe.js"></script>
 </body>
 
 </html>
