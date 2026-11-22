@@ -311,6 +311,11 @@ a:hover {
     padding: 88px 0;
 }
 
+/* First section on a page without a hero: clear the fixed navbar */
+.section.section-first {
+    padding-top: 150px;
+}
+
 .section + .section {
     border-top: 1px solid var(--border);
 }
