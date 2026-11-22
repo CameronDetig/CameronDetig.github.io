@@ -305,6 +305,15 @@ a:hover {
     color: var(--text-soft);
 }
 
+/* Same fade-in as the home hero (Technical and Creative pages) */
+.page-hero-animated .page-hero-title {
+    animation: fadeInUp 0.8s ease;
+}
+
+.page-hero-animated .page-hero-subtitle {
+    animation: fadeInUp 0.8s ease 0.15s both;
+}
+
 
 /* Section Styles */
 .section {
@@ -375,7 +384,7 @@ a:hover {
 /* Projects Gallery Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
 }
 
@@ -506,7 +515,7 @@ a:hover {
     letter-spacing: 2px;
 }
 
-/* Home: VFX & Animation teaser band */
+/* Home: Creative teaser band */
 .vfx-teaser {
     background-color: var(--bg-alt);
     border-top: 1px solid var(--border);
@@ -526,10 +535,24 @@ a:hover {
 }
 
 .vfx-teaser-title {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 1.125rem;
+}
+
+.vfx-teaser-title-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.vfx-teaser-title-link:hover {
+    color: var(--accent);
+}
+
+.vfx-teaser-title-link:hover .link-arrow {
+    transform: translateX(4px);
 }
 
 .vfx-teaser-text p {
@@ -539,50 +562,103 @@ a:hover {
     margin-bottom: 1.75rem;
 }
 
+.vfx-teaser-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 1.75rem;
+    color: var(--text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+}
+
+.vfx-teaser-list li::marker {
+    color: var(--accent);
+}
+
 .vfx-teaser-media {
     flex: 1 1 520px;
     min-width: 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
-.vfx-teaser-media img {
+.vfx-teaser-poster {
+    flex: 0 1 240px;
+    min-width: 0;
+    display: block;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.vfx-teaser-media-wide .vfx-teaser-poster {
+    flex-basis: 300px;
+}
+
+.vfx-teaser-poster:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.vfx-teaser-poster img {
     display: block;
     width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 14px;
+    height: auto;
 }
 
-.vfx-teaser-media img.wide {
-    grid-column: 1 / -1;
-    height: 280px;
+/* Home: tighter spacing between sections */
+.home .section:not(.section-first):not(.explore-section) {
+    padding: 64px 0;
 }
 
-.vfx-teaser-reel {
-    height: 150px;
-    border-radius: 14px;
-    background: var(--surface-2);
+/* Home: links to Technical and Creative */
+.explore-section {
+    padding: 56px 0;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.explore-card {
+    display: block;
+    background-color: var(--surface);
     border: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: var(--text-soft);
-    font-size: 0.875rem;
+    border-radius: 14px;
+    padding: 1.75rem;
+    color: inherit;
     text-decoration: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.vfx-teaser-reel:hover {
+.explore-card:hover {
     border-color: var(--accent);
-    color: var(--text);
+    transform: translateY(-4px);
 }
 
-.vfx-teaser-reel svg {
+.explore-card:hover .explore-title {
     color: var(--accent);
+}
+
+.explore-card:hover .link-arrow {
+    transform: translateX(4px);
+}
+
+.explore-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.explore-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Call to Action Section */
@@ -1214,6 +1290,15 @@ a:hover {
     margin: 0;
 }
 
+.about-intro .hero-title {
+    font-size: 3.5rem;
+}
+
+.about-intro .hero-subtitle {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+}
+
 /* About: resume */
 .resume-preview {
     background: var(--surface);
@@ -1274,6 +1359,14 @@ a:hover {
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 1.75rem;
+}
+
+/* Full-width divider between groups of work cards */
+.work-divider {
+    grid-column: 1 / -1;
+    border: 0;
+    border-top: 1px solid var(--border-strong);
+    margin: 8px 0;
 }
 
 .work-card.full-width {
@@ -1538,8 +1631,9 @@ img.work-media:hover {
         padding: 136px 0 72px;
     }
 
-    .hero-title {
-        font-size: 3rem;
+    .hero-title,
+    .about-intro .hero-title {
+        font-size: 2.75rem;
     }
 
     .hero-subtitle {
@@ -1558,6 +1652,10 @@ img.work-media:hover {
         padding: 64px 0;
     }
 
+    .home .section:not(.section-first):not(.explore-section) {
+        padding: 48px 0;
+    }
+
     .section-title,
     .vfx-teaser-title {
         font-size: 2rem;
@@ -1571,13 +1669,12 @@ img.work-media:hover {
         grid-template-columns: 1fr;
     }
 
-    .vfx-teaser-media img.wide {
-        height: 200px;
+    .vfx-teaser-media {
+        gap: 16px;
     }
 
-    .vfx-teaser-media img,
-    .vfx-teaser-reel {
-        height: 120px;
+    .explore-grid {
+        grid-template-columns: 1fr;
     }
 
     .cta-title {
@@ -1648,8 +1745,9 @@ img.work-media:hover {
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.5rem;
+    .hero-title,
+    .about-intro .hero-title {
+        font-size: 2.25rem;
     }
 
     .hero-subtitle {

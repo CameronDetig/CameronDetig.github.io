@@ -10,9 +10,9 @@ async function loadNavbar() {
 
     // Determine which page is active
     const currentPage = path.split('/').pop() || 'index.html';
-    const homeActive = (currentPage === 'index.html' || currentPage === '') ? 'active' : '';
-    const vfxActive = currentPage === 'vfx-animation.html' ? 'active' : '';
-    const aboutActive = currentPage === 'about.html' ? 'active' : '';
+    const technicalActive = currentPage === 'technical.html' ? 'active' : '';
+    const creativeActive = currentPage === 'creative.html' ? 'active' : '';
+    const aboutActive = (currentPage === 'index.html' || currentPage === '') ? 'active' : '';
 
     try {
         const response = await fetch(`${baseUrl}components/navbar.html`);
@@ -20,8 +20,8 @@ async function loadNavbar() {
         
         // Replace placeholders
         html = html.replace(/\{\{baseUrl\}\}/g, baseUrl);
-        html = html.replace(/\{\{homeActive\}\}/g, homeActive);
-        html = html.replace(/\{\{vfxActive\}\}/g, vfxActive);
+        html = html.replace(/\{\{technicalActive\}\}/g, technicalActive);
+        html = html.replace(/\{\{creativeActive\}\}/g, creativeActive);
         html = html.replace(/\{\{aboutActive\}\}/g, aboutActive);
         
         navbarPlaceholder.innerHTML = html;

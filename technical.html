@@ -17,8 +17,8 @@
     <link rel="icon" type="image/webp" href="images/favicon.webp">
     <meta name="description"
         content="Portfolio showcasing AI and machine learning projects by Cameron Detig, AI Engineer with an MS in Computer Science.">
-    <title>Cameron Detig - AI & Software Development Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css?v=18">
+    <title>Technical - Cameron Detig</title>
+    <link rel="stylesheet" href="styles/main.css?v=31">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -28,20 +28,11 @@
     <!-- Navigation -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Hello, I'm Cameron.</h1>
-            <p class="hero-subtitle">Building AI-powered solutions at the intersection of technology and creativity.</p>
-            <p class="hero-description">
-                I am an AI Engineer with a Master's in Computer Science and a blend of experience in
-                artificial intelligence and creative pipelines.
-                My work focuses on applying LLMs and machine learning to solve real-world challenges.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="cta-button">View projects</a>
-                <a href="vfx-animation.html" class="cta-button cta-button-secondary">VFX &amp; Animation reels</a>
-            </div>
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-animated">
+        <div class="container">
+            <h1 class="page-hero-title">Technical</h1>
+            <p class="page-hero-subtitle">AI, machine learning and graphics projects</p>
         </div>
     </section>
 
@@ -155,28 +146,26 @@
         </div>
     </section>
 
-    <!-- VFX & Animation teaser -->
+    <!-- Creative teaser -->
     <section class="section vfx-teaser">
         <div class="container vfx-teaser-inner">
             <div class="vfx-teaser-text">
-                <p class="eyebrow">VFX &amp; Animation</p>
-                <h2 class="vfx-teaser-title">Previs for Ahsoka and Predator: Killer of Killers</h2>
-                <p>Reels from my time at The Third Floor, plus personal animation, Unreal Engine rigging, Maya tools
-                    and 3D renders.</p>
-                <a href="vfx-animation.html" class="direct-link">See the reels <span class="link-arrow">→</span></a>
+                <h2 class="vfx-teaser-title"><a href="creative.html" class="vfx-teaser-title-link">Creative Work <span class="link-arrow">→</span></a></h2>
+                <ul class="vfx-teaser-list">
+                    <li>Previs Demo Reels</li>
+                    <li>Personal animation</li>
+                    <li>Unreal Engine rigging</li>
+                    <li>Maya tools</li>
+                    <li>3D renders</li>
+                </ul>
             </div>
             <div class="vfx-teaser-media">
-                <img class="wide" src="images/vfx-animation/render-final.webp" alt="3D render" width="1920"
-                    height="1080" loading="lazy">
-                <img src="images/vfx-animation/buggy-control-rig-poster.jpg" alt="Unreal Engine control rig for a buggy"
-                    width="1280" height="720" loading="lazy">
-                <a href="vfx-animation.html" class="vfx-teaser-reel">
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1.6" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M10 8l6 4-6 4z"></path>
-                    </svg>
-                    Ahsoka Previs Reel
+                <a href="creative.html" class="vfx-teaser-poster" aria-label="Ahsoka previs work">
+                    <img src="images/about/posters/Ahsoka_Poster.jpeg" alt="Ahsoka series poster" loading="lazy">
+                </a>
+                <a href="creative.html" class="vfx-teaser-poster" aria-label="Predator: Killer of Killers previs work">
+                    <img src="images/about/posters/Predator_Killer_of_Killers_Poster.jpg"
+                        alt="Predator: Killer of Killers poster" loading="lazy">
                 </a>
             </div>
         </div>
@@ -188,8 +177,8 @@
             <div class="cta-content">
                 <h2 class="cta-title">Want to learn more?</h2>
                 <div class="cta-buttons">
-                    <a href="about.html" class="cta-button">About Me</a>
-                    <a href="vfx-animation.html" class="cta-button cta-button-secondary">VFX &amp; Animation Work</a>
+                    <a href="index.html" class="cta-button">About Me</a>
+                    <a href="creative.html" class="cta-button cta-button-secondary">Creative Work</a>
                 </div>
             </div>
         </div>
