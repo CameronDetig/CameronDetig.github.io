@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HVH1X106DQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HVH1X106DQ');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
+    <meta name="description"
+        content="Portfolio showcasing AI and machine learning projects by Cameron Detig, AI Engineer with an MS in Computer Science.">
+    <title>Cameron Detig - AI & Software Development Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css?v=18">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hello, I'm Cameron.</h1>
+            <p class="hero-subtitle">Building AI-powered solutions at the intersection of technology and creativity.</p>
+            <p class="hero-description">
+                I am an AI Engineer with a Master's in Computer Science and a blend of experience in
+                artificial intelligence and creative pipelines.
+                My work focuses on applying LLMs and machine learning to solve real-world challenges.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="cta-button">View projects</a>
+                <a href="vfx-animation.html" class="cta-button cta-button-secondary">VFX &amp; Animation reels</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-header-note">AI, ML and graphics work</p>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project 1: CG Production Data Assistant -->
+                <a href="projects/cg-production-assistant.html" class="project-card">
+                    <div class="project-card-image">
+                        <img src="images/projects/cg-assistant/thumbnail.png" alt="CG Production Data Assistant">
+                        <div class="project-card-overlay">
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">CG Production Data Assistant</h3>
+                        <p class="project-card-description">
+                            Assistant for querying a database of VFX/Animation production data using LLMs, RAG, and
+                            vector embeddings.
+                            Containerized backend with LangChain running on AWS, and a frontend hosted on AWS CloudFront.
+                        </p>
+                        <div class="project-card-tech">
+                            <span class="tech-tag-small">Python</span>
+                            <span class="tech-tag-small">LLMs</span>
+                            <span class="tech-tag-small">AWS</span>
+                            <span class="tech-tag-small">LangChain</span>
+                            <span class="tech-tag-small">Docker</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3: 3D Model Viewer -->
+                <a href="projects/3d-model-viewer.html" class="project-card">
+                    <div class="project-card-image">
+                        <img src="images/projects/3d-model-viewer/thumbnail.jpeg" alt="3D Model Viewer">
+                        <div class="project-card-overlay">
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">3D Model Viewer</h3>
+                        <p class="project-card-description">
+                            WebGL-based 3D model viewer with Phong lighting and trackball camera
+                            controls.
+                            Built using JavaScript and WebGL.
+                        </p>
+                        <div class="project-card-tech">
+                            <span class="tech-tag-small">JavaScript</span>
+                            <span class="tech-tag-small">WebGL</span>
+                            <span class="tech-tag-small">GLSL</span>
+                            <span class="tech-tag-small">3D Graphics</span>
+                            <span class="tech-tag-small">HTML</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 4: CIFAR-10 Image Diffusion Model -->
+                <a href="projects/cifar10-diffusion-model.html" class="project-card">
+                    <div class="project-card-image">
+                        <img src="images/projects/cifar10-diffusion/thumbnail.png" alt="CIFAR-10 Diffusion Model">
+                        <div class="project-card-overlay">
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">CIFAR-10 Image Diffusion Model</h3>
+                        <p class="project-card-description">
+                            Diffusion image generation model trained on CIFAR-10 dataset. Uses a UNet architecture
+                            to generate 32x32 pixel images across 10 object categories.
+                        </p>
+                        <div class="project-card-tech">
+                            <span class="tech-tag-small">Python</span>
+                            <span class="tech-tag-small">PyTorch</span>
+                            <span class="tech-tag-small">Diffusion Models</span>
+                            <span class="tech-tag-small">UNet</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 5: Volumetric Motion Capture Analysis Tool -->
+                <a href="projects/volumetric-mocap-analysis.html" class="project-card">
+                    <div class="project-card-image">
+                        <img src="images/projects/volumetric-mocap/diagram.png"
+                            alt="Volumetric Motion Capture Analysis Tool">
+                        <div class="project-card-overlay">
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Volumetric Motion Capture Analysis</h3>
+                        <p class="project-card-description">
+                            Blender addon for extracting articulated skeletons from volumetric motion capture.
+                            Developed during an NSF REU at Georgia State University for biomechanical analysis.
+                        </p>
+                        <div class="project-card-tech">
+                            <span class="tech-tag-small">Python</span>
+                            <span class="tech-tag-small">Blender</span>
+                            <span class="tech-tag-small">Motion Capture</span>
+                            <span class="tech-tag-small">Biomechanics</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VFX & Animation teaser -->
+    <section class="section vfx-teaser">
+        <div class="container vfx-teaser-inner">
+            <div class="vfx-teaser-text">
+                <p class="eyebrow">VFX &amp; Animation</p>
+                <h2 class="vfx-teaser-title">Previs for Ahsoka and Predator: Killer of Killers</h2>
+                <p>Reels from my time at The Third Floor, plus personal animation, Unreal Engine rigging, Maya tools
+                    and 3D renders.</p>
+                <a href="vfx-animation.html" class="direct-link">See the reels <span class="link-arrow">→</span></a>
+            </div>
+            <div class="vfx-teaser-media">
+                <img class="wide" src="images/vfx-animation/render-final.webp" alt="3D render" width="1920"
+                    height="1080" loading="lazy">
+                <img src="images/vfx-animation/buggy-control-rig-poster.jpg" alt="Unreal Engine control rig for a buggy"
+                    width="1280" height="720" loading="lazy">
+                <a href="vfx-animation.html" class="vfx-teaser-reel">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.6" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M10 8l6 4-6 4z"></path>
+                    </svg>
+                    Ahsoka Previs Reel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to About page -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Want to learn more?</h2>
+                <div class="cta-buttons">
+                    <a href="about.html" class="cta-button">About Me</a>
+                    <a href="vfx-animation.html" class="cta-button cta-button-secondary">VFX &amp; Animation Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
