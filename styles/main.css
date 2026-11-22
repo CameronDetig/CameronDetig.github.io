@@ -214,7 +214,11 @@ a:hover {
 .icon-linkedin { --icon: url('../images/social/linkedin.svg'); }
 .icon-github { --icon: url('../images/social/github.svg'); }
 .icon-vimeo { --icon: url('../images/social/vimeo.svg'); }
-.icon-hf { --icon: url('../images/social/hugging-face.png'); }
+.icon-hf {
+    --icon: url('../images/social/hugging-face.png');
+    width: 24px;
+    height: 24px;
+}
 
 .icon-imdb {
     --icon: url('../images/social/imdb.png');
