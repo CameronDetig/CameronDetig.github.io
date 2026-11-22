@@ -1110,6 +1110,40 @@ a:hover {
     border-color: var(--accent);
 }
 
+/* Skills section: 2x2 layout with icon headers */
+.skills-grid.skills-grid-2col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.skill-category-head {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    margin-bottom: 1.25rem;
+}
+
+.skill-category-head .skill-category-title {
+    margin-bottom: 0;
+    font-family: var(--font-heading);
+}
+
+.skill-icon {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--accent-tint);
+    color: var(--accent);
+}
+
+.skill-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
 /* Contact Section */
 .contact-text {
     font-size: 1.1rem;
@@ -1567,7 +1601,8 @@ img.work-media:hover {
         margin-left: 0;
     }
 
-    .skills-grid {
+    .skills-grid,
+    .skills-grid.skills-grid-2col {
         grid-template-columns: 1fr;
     }
 
