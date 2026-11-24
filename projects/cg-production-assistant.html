@@ -16,9 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/webp" href="../images/favicon.webp">
     <meta name="description"
-        content="AI-powered assistant for querying CG production data using LLMs, RAG, and vector databases. Built with AWS, LangChain, and with the frontend hosted on AWS CloudFront.">
+        content="AI-powered assistant for querying CG production data using LLMs, RAG, and vector databases.">
     <title>CG Production Data Assistant - Cameron Detig</title>
-    <link rel="stylesheet" href="../styles/main.css?v=35">
+    <link rel="stylesheet" href="../styles/main.css?v=38">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -44,25 +44,28 @@
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Overview</h2>
                 <p class="project-detail-text">
-                    Assistant built with a containerized AWS Lambda backend, langchain, Bedrock models, and PostgreSQL
-                    integration. Providing information on a database of CG production assets based on natural language
-                    queries.
+                    Assistant running on AWS that utilizes a Lambda backend, langchain, Bedrock LLMs, and PostgreSQL database that includes embedding vectors for similarity search. 
+                    Allows user to search a dataset of CG production assets using natural language queries and image search.
                 </p>
             </div>
 
             <!-- Links -->
             <div class="project-detail-content">
-                <p class="project-detail-text">
-                    <a href="https://github.com/CameronDetig/CG_Production_Data_Assistant" target="_blank"
-                        rel="noopener noreferrer" class="direct-link">
-                        View on GitHub <span class="link-arrow">→</span>
-                    </a>
-                </p>
+                <div class="project-links">
+                    <div class="project-links-row">
+                        <a href="https://d2wzq5ood2viu0.cloudfront.net/" target="_blank" rel="noopener noreferrer"
+                            class="cta-button">Try it out</a>
+                        <a href="https://github.com/CameronDetig/CG_Production_LLM_Assistant" target="_blank"
+                            rel="noopener noreferrer" class="cta-button cta-button-secondary"><span class="social-icon icon-github"></span>LLM Assistant Repo</a>
+                        <a href="https://github.com/CameronDetig/CG_Production_Metadata_Extractor" target="_blank"
+                            rel="noopener noreferrer" class="cta-button cta-button-secondary"><span class="social-icon icon-github"></span>Metadata Extractor Repo</a>
+                    </div>
+                </div>
             </div>
 
             <!-- Thumbnail -->
             <div class="project-detail-content">
-                <img src="../images/technical/cg-assistant/thumbnail.jpg" alt="CG Production Data Assistant"
+                <img src="../images/technical/cg-assistant/thumbnail.png" alt="CG Production Data Assistant"
                     class="diagram-image">
             </div>
 
@@ -167,24 +170,19 @@
             <!-- Links -->
             <div class="project-detail-content">
                 <h2 class="project-detail-heading">Project Links</h2>
-                <p class="project-detail-text">
-                    <a href="https://github.com/CameronDetig/CG_Production_Metadata_Extractor" target="_blank"
-                        rel="noopener noreferrer" class="direct-link">
-                        View Metadata Extractor on GitHub <span class="link-arrow">→</span>
-                    </a>
-                </p>
-                <p class="project-detail-text">
-                    <a href="https://github.com/CameronDetig/CG_Production_LLM_Assistant" target="_blank"
-                        rel="noopener noreferrer" class="direct-link">
-                        View LLM Assistant on GitHub <span class="link-arrow">→</span>
-                    </a>
-                </p>
-                <p class="project-detail-text">
-                    <a href="https://d2wzq5ood2viu0.cloudfront.net/" target="_blank"
-                        rel="noopener noreferrer" class="direct-link">
-                        Try it out <span class="link-arrow">→</span>
-                    </a>
-                </p>
+                <div class="project-links">
+                    <div class="project-links-row">
+                        <a href="https://d2wzq5ood2viu0.cloudfront.net/" target="_blank" rel="noopener noreferrer"
+                            class="cta-button">Try it out</a>
+                    </div>
+                    <div class="project-links-row">
+                        <a href="https://github.com/CameronDetig/CG_Production_LLM_Assistant" target="_blank"
+                            rel="noopener noreferrer" class="cta-button cta-button-secondary"><span class="social-icon icon-github"></span>LLM Assistant Repo</a>
+                        <a href="https://github.com/CameronDetig/CG_Production_Metadata_Extractor" target="_blank"
+                            rel="noopener noreferrer" class="cta-button cta-button-secondary"><span class="social-icon icon-github"></span>Metadata Extractor Repo</a>
+                    </div>
+                </div>
+            </div>
             </div>
 
             <!-- Navigation -->
